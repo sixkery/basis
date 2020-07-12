@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basis.iml" filepath="$PROJECT_DIR$/basis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-mbg/basis-mbg.iml" filepath="$PROJECT_DIR$/mall-mbg/basis-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-security/basis-security.iml" filepath="$PROJECT_DIR$/mall-security/basis-security.iml" />
+    </modules>
+  </component>
+</project>
