@@ -17,7 +17,7 @@ import java.util.List;
  * <p>
  * 时间工具类
  */
-public class DateUtils {
+public class DateUtil {
 
     private static final int TODAY = 1;
     private static final int SEVEN_DAY = 2;
@@ -91,7 +91,7 @@ public class DateUtils {
 
 
     public static void main(String[] args) {
-        DateInterval interval = DateUtils.getInterval(4);
+        DateInterval interval = DateUtil.getInterval(4);
         System.out.println("interval = " + interval.getStartTime());
         System.out.println("interval = " + interval.getEndTime());
     }

@@ -1,7 +1,6 @@
 package com.sixkery.config;
 
 import com.sixkery.component.*;
-import com.sixkery.mall.component.*;
 import com.sixkery.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

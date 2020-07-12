@@ -1,0 +1,13 @@
+com/sixkery/web/PmsBrandController.class
+com/sixkery/mbg/model/BrandExample$Criterion.class
+com/sixkery/config/Swagger2Config.class
+com/sixkery/mbg/model/BrandExample$Criteria.class
+com/sixkery/service/impl/RedisServiceImpl.class
+com/sixkery/entity/Brand.class
+com/sixkery/config/MybatisPlusGenerator$1.class
+com/sixkery/service/RedisService.class
+com/sixkery/config/MybatisPlusGenerator.class
+com/sixkery/config/MybatisPlusGenerator$2.class
+com/sixkery/mbg/model/BrandExample$GeneratedCriteria.class
+com/sixkery/mbg/model/BrandExample.class
+com/sixkery/MallMbgApplication.class
