@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9adf35-e2b9-418c-b266-c33984fb9ee5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/api/BasicResponseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/HC_007.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/HC_007.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContextHolderStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContextHolderStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/ThreadLocalSecurityContextHolderStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/ThreadLocalSecurityContextHolderStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/AuthorizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/AuthorizeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/FilterSecurityInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/FilterSecurityInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurityConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurityConfigurerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthenticationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthenticationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthorizeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthorizeProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/JwtProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/api/ResponseModels.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/api/ResponseModels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/response/SecurityResponseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/response/SecurityResponseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/SecurityContextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/SecurityContextUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/bcrypt/BCryptPasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/bcrypt/BCryptPasswordEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/Code2SessionOutDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/Code2SessionOutDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/WxXcxAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/WxXcxAuth.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sixkery.api" />
+      <recent name="com.sixkery" />
       <recent name="com.sixkery.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -84,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594536525320</updated>
       <workItem from="1594536527635" duration="1969000" />
-      <workItem from="1594794290663" duration="2716000" />
+      <workItem from="1594794290663" duration="4736000" />
     </task>
     <servers />
   </component>

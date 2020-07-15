@@ -1,8 +1,9 @@
 package com.sixkery.util;
 
-import com.blinkframework.security.portal.SecurityContextHolder;
-import com.blinkframework.security.portal.authentication.UserDetails;
-import com.blinkframework.security.portal.authentication.token.Authentication;
+
+import com.sixkery.SecurityContextHolder;
+import com.sixkery.authentication.UserDetails;
+import com.sixkery.authentication.token.Authentication;
 
 import java.io.Serializable;
 

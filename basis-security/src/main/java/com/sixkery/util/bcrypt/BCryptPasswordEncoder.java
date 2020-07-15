@@ -15,7 +15,7 @@
  */
 package com.sixkery.util.bcrypt;
 
-import com.blinkframework.security.portal.util.PasswordEncoder;
+import com.sixkery.util.PasswordEncoder;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

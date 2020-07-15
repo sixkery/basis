@@ -1,6 +1,12 @@
 package com.sixkery.api;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sixkery.ResponseStatus;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * 对ResponseModel快捷封装,通用返回对象
  *
@@ -99,6 +105,26 @@ public class ResponseModels<T> {
      */
     public static <T> ResponseModel<T> forbidden(T data) {
         return new ResponseModel<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+    }
+
+    public static void print(HttpServletResponse response, ResponseStatus status) throws IOException {
+        print(response, status, null);
+    }
+
+    public static <T> void print(HttpServletResponse response, ResponseStatus status, T data) throws IOException {
+        print(response, new ResponseModel<>(status, data));
+    }
+
+
+    public static void print(HttpServletResponse response, ResponseModel model) throws IOException {
+        // 如果ResponseStatus的值小于等于1000且不等于200，那么就算是失败的请求，这里设置对应的响应状态
+        int rsCode = model.getCode();
+        if (rsCode < 1000 && rsCode != 200) {
+            response.setStatus(rsCode);
+        }
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-Type", "application/json");
+        new ObjectMapper().writer().writeValue(response.getOutputStream(), model);
     }
 
 }

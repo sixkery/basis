@@ -1,8 +1,8 @@
 package com.sixkery.weixin.auth;
 
-import com.blinkframework.security.portal.weixin.constant.WxConst;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sixkery.weixin.constant.WxConst;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;

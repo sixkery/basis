@@ -1,5 +1,6 @@
 package com.sixkery.authentication.filter;
 
+import com.sixkery.api.BasicResponseStatus;
 import com.sixkery.api.ResponseModels;
 import com.sixkery.authentication.AuthorizationType;
 import com.sixkery.authentication.token.Authentication;
@@ -14,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author sixkery
+ */
 public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
     private AuthorizationType authorizationType;
