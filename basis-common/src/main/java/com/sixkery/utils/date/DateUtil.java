@@ -12,10 +12,11 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author sixkery
- * @date 2020/5/16
  * <p>
  * 时间工具类
+ *
+ * @author sixkery
+ * @date 2020/5/16
  */
 public class DateUtil {
 

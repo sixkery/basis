@@ -41,7 +41,7 @@ public class ResponseModels<T> {
      *
      * @param errorCode 错误码
      */
-    public static <T> ResponseModel<T> failed(IErrorCode errorCode) {
+    public static <T> ResponseModel<T> failed(ErrorCode errorCode) {
         return new ResponseModel<T>(errorCode.getCode(), errorCode.getMessage(), null);
     }
 
@@ -51,7 +51,7 @@ public class ResponseModels<T> {
      * @param errorCode 错误码
      * @param message   错误信息
      */
-    public static <T> ResponseModel<T> failed(IErrorCode errorCode, String message) {
+    public static <T> ResponseModel<T> failed(ErrorCode errorCode, String message) {
         return new ResponseModel<>(errorCode.getCode(), message, null);
     }
 

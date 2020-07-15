@@ -125,13 +125,13 @@
 
         <dependencies>
 
-            <!--mall通用模块-->
+
             <dependency>
                 <groupId>com.sixkery.basis</groupId>
                 <artifactId>basis-common</artifactId>
                 <version>${basis-common.version}</version>
             </dependency>
-            <!--mall中MBG生成模块-->
+
             <dependency>
                 <groupId>com.sixkery.basis</groupId>
                 <artifactId>basis-mbg</artifactId>

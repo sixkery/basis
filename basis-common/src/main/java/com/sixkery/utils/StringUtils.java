@@ -15,12 +15,4 @@ public class StringUtils extends org.springframework.util.StringUtils {
         return !org.springframework.util.StringUtils.isEmpty(str);
 
     }
-
-    public static void main(String[] args) {
-        LocalDate now = LocalDate.now();
-        LocalDate beforeDay = now.minus(1, ChronoUnit.DAYS);
-        LocalDate sevenDays = now.minus(7, ChronoUnit.DAYS);
-        LocalDate fifteenDays = now.minus(15, ChronoUnit.DAYS);
-        LocalDate thirtyDays = now.minus(30, ChronoUnit.DAYS);
-    }
 }
