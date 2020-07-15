@@ -5,6 +5,9 @@ import lombok.Data;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author sixkery
+ */
 @Data
 public class AuthorizeProperties {
 

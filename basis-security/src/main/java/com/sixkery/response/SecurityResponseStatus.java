@@ -1,6 +1,7 @@
 package com.sixkery.response;
 
-import com.blinkframework.commons.ResponseStatus;
+
+import com.sixkery.ResponseStatus;
 
 /**
  * Create by Maoning in 2019/9/27

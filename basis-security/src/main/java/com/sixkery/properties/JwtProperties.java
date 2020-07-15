@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.UUID;
 
 /**
- * Create by Maoning in 2019/11/7
+ * @author sixkery
  */
 @Data
 public class JwtProperties {

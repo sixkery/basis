@@ -1,5 +1,8 @@
 package com.sixkery.properties;
 
+/**
+ * @author sixkery
+ */
 public class AuthenticationProperties {
 
     private WxProperties wx = new WxProperties();

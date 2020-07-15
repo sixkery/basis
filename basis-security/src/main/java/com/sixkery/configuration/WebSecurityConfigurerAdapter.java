@@ -2,6 +2,8 @@ package com.sixkery.configuration;
 
 import com.sixkery.authentication.AuthorizationType;
 import com.sixkery.authentication.UserDetailsService;
+import com.sixkery.configuration.configurer.FilterSecurityInterceptorConfigurer;
+import com.sixkery.properties.AuthorizeProperties;
 import com.sixkery.properties.JwtProperties;
 import com.sixkery.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,9 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 import javax.servlet.Filter;
 
+/**
+ * @author sixkery
+ */
 public abstract class WebSecurityConfigurerAdapter implements WebSecurityConfigurer<WebSecurity> {
 
     private ApplicationContext context;

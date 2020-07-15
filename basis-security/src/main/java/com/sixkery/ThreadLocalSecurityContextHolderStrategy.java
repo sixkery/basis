@@ -1,5 +1,8 @@
 package com.sixkery;
 
+/**
+ * @author sixkery
+ */
 public class ThreadLocalSecurityContextHolderStrategy implements SecurityContextHolderStrategy {
 
     private static final ThreadLocal<SecurityContext> contextHolder = new ThreadLocal<>();

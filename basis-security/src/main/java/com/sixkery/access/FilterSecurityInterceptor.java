@@ -21,10 +21,16 @@ import java.util.*;
  */
 public class FilterSecurityInterceptor extends GenericFilterBean {
 
+    /**
+     * 认证过的数组
+     */
     private String[] authenticated;
 
     private AuthorizeService authorizeService;
 
+    /**
+     * 权限
+     */
     private Map<String, List<String>> permissions;
 
     private List<String> permissionValues = new ArrayList<>();
