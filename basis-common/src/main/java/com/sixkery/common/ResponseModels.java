@@ -1,4 +1,4 @@
-package com.sixkery.api;
+package com.sixkery.common;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;

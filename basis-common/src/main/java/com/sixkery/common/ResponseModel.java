@@ -1,5 +1,6 @@
-package com.sixkery.api;
+package com.sixkery.common;
 
+import com.sixkery.ResponseStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -30,6 +31,14 @@ public class ResponseModel<T> {
         this.code = code;
         this.message = message;
         this.data = data;
+    }
+
+    public ResponseModel(ResponseStatus status) {
+        this(status, null);
+    }
+
+    public ResponseModel(ResponseStatus status, T data) {
+        this(status.value(), status.reasonPhrase(), data);
     }
 
 }

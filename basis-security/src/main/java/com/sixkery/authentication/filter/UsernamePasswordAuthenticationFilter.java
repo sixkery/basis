@@ -2,7 +2,7 @@ package com.sixkery.authentication.filter;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sixkery.api.ResponseModels;
+import com.sixkery.common.ResponseModels;
 import com.sixkery.authentication.JwtFactory;
 import com.sixkery.authentication.UserDetails;
 import com.sixkery.authentication.token.Authentication;

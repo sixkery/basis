@@ -1,6 +1,6 @@
 package com.sixkery.exception;
 
-import com.sixkery.api.ErrorCode;
+import com.sixkery.common.ErrorCode;
 
 /**
  * 自定义API异常

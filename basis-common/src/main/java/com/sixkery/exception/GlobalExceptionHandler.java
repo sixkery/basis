@@ -1,7 +1,7 @@
 package com.sixkery.exception;
 
-import com.sixkery.api.ResponseModel;
-import com.sixkery.api.ResponseModels;
+import com.sixkery.common.ResponseModel;
+import com.sixkery.common.ResponseModels;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

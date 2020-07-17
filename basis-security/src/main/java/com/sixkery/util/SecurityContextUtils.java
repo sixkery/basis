@@ -14,6 +14,7 @@ import java.io.Serializable;
  *     <li>类对外提供单一实例，类的所有方法都是成员方法</li>
  *     <li>构造函数私有化，不对外提供实例，所有方法声明为静态方法</li>
  * </ul>
+ * @author sixkery
  */
 public class SecurityContextUtils {
 

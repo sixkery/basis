@@ -1,7 +1,7 @@
 package com.sixkery.access;
 
 import com.sixkery.SecurityContextHolder;
-import com.sixkery.api.ResponseModels;
+import com.sixkery.common.ResponseModels;
 import com.sixkery.authentication.UserDetails;
 import com.sixkery.authentication.token.Authentication;
 import com.sixkery.util.AntPathRequestMatcher;

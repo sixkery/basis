@@ -1,4 +1,4 @@
-package com.sixkery.api;
+package com.sixkery.common;
 
 /**
  * @author sixkery

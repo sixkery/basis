@@ -1,4 +1,4 @@
-package com.sixkery.api;
+package com.sixkery.common;
 
 
 /**
@@ -30,7 +30,13 @@ public enum ResultCode implements ErrorCode {
     FORBIDDEN(403, "没有相关权限");
 
 
+    /**
+     * 状态码
+     */
     private int code;
+    /**
+     * 返回信息
+     */
     private String message;
 
     private ResultCode(int code, String message) {
