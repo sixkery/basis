@@ -7,7 +7,7 @@ package com.sixkery.api;
  * @author sixkery
  * @date 2019/4/19
  */
-public enum ResultCode implements IErrorCode {
+public enum ResultCode implements ErrorCode {
     /**
      * 操作成功
      */

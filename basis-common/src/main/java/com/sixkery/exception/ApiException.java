@@ -1,6 +1,6 @@
 package com.sixkery.exception;
 
-import com.sixkery.api.IErrorCode;
+import com.sixkery.api.ErrorCode;
 
 /**
  * @author sixkery
@@ -8,9 +8,9 @@ import com.sixkery.api.IErrorCode;
  * 自定义API异常
  */
 public class ApiException extends RuntimeException {
-    private IErrorCode errorCode;
+    private ErrorCode errorCode;
 
-    public ApiException(IErrorCode errorCode) {
+    public ApiException(ErrorCode errorCode) {
         super(errorCode.getMessage());
         this.errorCode = errorCode;
     }
@@ -28,7 +28,7 @@ public class ApiException extends RuntimeException {
         super(message, cause);
     }
 
-    public IErrorCode getErrorCode() {
+    public ErrorCode getErrorCode() {
         return errorCode;
     }
 

@@ -6,7 +6,7 @@ package com.sixkery.api;
  * <p>
  * 封装API的错误码
  */
-public interface IErrorCode {
+public interface ErrorCode {
     /**
      * 获取状态码
      *
