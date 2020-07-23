@@ -1,7 +1,7 @@
 package com.sixkery.exception;
 
-import com.sixkery.api.ResponseResult;
-import com.sixkery.api.ResponseResults;
+import com.sixkery.common.ResponseResult;
+import com.sixkery.common.ResponseResults;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
         if (e.getErrorCode() != null) {
             return ResponseResults.failed(e.getErrorCode());
         } else {
-            return com.sixkery.api.ResponseResults.failed(e.getMessage());
+            return ResponseResults.failed(e.getMessage());
         }
     }
 

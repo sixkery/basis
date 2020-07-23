@@ -1,7 +1,6 @@
 package com.sixkery.component;
 
 import cn.hutool.json.JSONUtil;
-import com.sixkery.api.ResponseResults;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 

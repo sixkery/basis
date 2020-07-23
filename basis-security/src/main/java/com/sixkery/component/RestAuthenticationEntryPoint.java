@@ -1,7 +1,6 @@
 package com.sixkery.component;
 
 import cn.hutool.json.JSONUtil;
-import com.sixkery.api.ResponseResults;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
