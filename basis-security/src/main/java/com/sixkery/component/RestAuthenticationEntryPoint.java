@@ -1,6 +1,7 @@
 package com.sixkery.component;
 
 import cn.hutool.json.JSONUtil;
+import com.sixkery.common.ApiResponses;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
@@ -23,7 +24,7 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
         response.setHeader("Cache-Control", "no-cache");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
-        response.getWriter().println(JSONUtil.parse(ResponseResults.unauthorized(authException.getMessage())));
+        response.getWriter().println(JSONUtil.parse(ApiResponses.unauthorized(authException.getMessage())));
         response.getWriter().flush();
     }
 }

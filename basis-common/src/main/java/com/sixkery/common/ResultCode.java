@@ -2,7 +2,7 @@ package com.sixkery.common;
 
 
 /**
- * 枚举了一些常用API操作码
+ * 枚举了一些常用 API 操作码
  *
  * @author sixkery
  * @date 2019/4/19
@@ -29,7 +29,6 @@ public enum ResultCode implements ErrorCode {
      */
     FORBIDDEN(403, "没有相关权限");
 
-
     /**
      * 状态码
      */
@@ -45,12 +44,11 @@ public enum ResultCode implements ErrorCode {
     }
 
 
-    @Override
+
     public int getCode() {
         return code;
     }
 
-    @Override
     public String getMessage() {
         return message;
     }

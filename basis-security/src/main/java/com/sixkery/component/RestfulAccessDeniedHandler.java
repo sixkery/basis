@@ -1,6 +1,7 @@
 package com.sixkery.component;
 
 import cn.hutool.json.JSONUtil;
+import com.sixkery.common.ApiResponses;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
@@ -24,7 +25,7 @@ public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
         response.setHeader("Cache-Control", "no-cache");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
-        response.getWriter().println(JSONUtil.parse(ResponseResults.forbidden(e.getMessage())));
+        response.getWriter().println(JSONUtil.parse(ApiResponses.forbidden(e.getMessage())));
         response.getWriter().flush();
     }
 }

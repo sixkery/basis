@@ -1,10 +1,11 @@
 package com.sixkery.common;
 
 /**
+ * 封装 API 的错误码
+ *
  * @author sixkery
  * @date 2020/4/21
  * <p>
- * 封装API的错误码
  */
 public interface ErrorCode {
     /**

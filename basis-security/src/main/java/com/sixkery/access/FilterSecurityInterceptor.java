@@ -1,7 +1,7 @@
 package com.sixkery.access;
 
 import com.sixkery.SecurityContextHolder;
-import com.sixkery.common.ResponseResults;
+import com.sixkery.common.ApiResponses;
 import com.sixkery.authentication.UserDetails;
 import com.sixkery.authentication.token.Authentication;
 import com.sixkery.util.AntPathRequestMatcher;
@@ -62,7 +62,7 @@ public class FilterSecurityInterceptor extends GenericFilterBean {
 
         if (auth == null) {
             // throw new AccessDeniedException("Unauthorized");
-            ResponseResults.unauthorized((HttpServletResponse) response);
+            ApiResponses.unauthorized((HttpServletResponse) response);
             return;
         }
 
@@ -81,7 +81,7 @@ public class FilterSecurityInterceptor extends GenericFilterBean {
 
         // 无权访问
         if (!hasPerm) {
-            ResponseResults.forbidden((HttpServletResponse) response);
+            ApiResponses.forbidden((HttpServletResponse) response);
             return;
         }
 
