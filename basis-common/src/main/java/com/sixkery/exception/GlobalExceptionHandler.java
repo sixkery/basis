@@ -1,7 +1,6 @@
 package com.sixkery.exception;
 
-import com.sixkery.common.ApiResponse;
-import com.sixkery.common.ApiResponses;
+import com.sixkery.common.response.ApiResponses;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +15,7 @@ public class GlobalExceptionHandler {
 
     @ResponseBody
     @ExceptionHandler(value = ApiException.class)
-    public ApiResponse<Object> handle(ApiException e) {
+    public ApiResponses<Object> handle(ApiException e) {
 
         if (e.getErrorCode() != null) {
             return ApiResponses.failed(e.getErrorCode());

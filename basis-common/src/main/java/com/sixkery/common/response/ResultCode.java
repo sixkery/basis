@@ -1,5 +1,7 @@
-package com.sixkery.common;
+package com.sixkery.common.response;
 
+
+import com.sixkery.common.response.ErrorCode;
 
 /**
  * 枚举了一些常用 API 操作码
@@ -45,10 +47,12 @@ public enum ResultCode implements ErrorCode {
 
 
 
+    @Override
     public int getCode() {
         return code;
     }
 
+    @Override
     public String getMessage() {
         return message;
     }

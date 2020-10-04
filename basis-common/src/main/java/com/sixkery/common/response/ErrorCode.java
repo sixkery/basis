@@ -1,4 +1,4 @@
-package com.sixkery.common;
+package com.sixkery.common.response;
 
 /**
  * 封装 API 的错误码

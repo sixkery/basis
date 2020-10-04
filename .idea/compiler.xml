@@ -12,10 +12,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="basis" target="1.5" />
+      <module name="basis" target="1.8" />
       <module name="basis-common" target="6" />
-      <module name="basis-mbg" target="1.5" />
-      <module name="basis-security" target="1.5" />
+      <module name="basis-mbg" target="1.8" />
+      <module name="basis-security" target="1.8" />
       <module name="mall-common" target="1.5" />
       <module name="mall-mbg" target="1.5" />
       <module name="mall-security" target="1.5" />
