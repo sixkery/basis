@@ -2,7 +2,6 @@ package com.sixkery.common.response;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sixkery.ResponseStatus;
 import lombok.Data;
 
 import javax.servlet.http.HttpServletResponse;
@@ -34,8 +33,6 @@ public class ApiResponses<T> {
     private ApiResponses() {
     }
 
-    public ApiResponses(ResponseStatus status, T data) {
-    }
 
 
     public static <T> ApiResponses<T> ok() {
@@ -126,13 +123,9 @@ public class ApiResponses<T> {
         return new ApiResponses<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
 
-    public static void print(HttpServletResponse response, ResponseStatus status) throws IOException {
-        print(response, status, null);
-    }
 
-    public static <T> void print(HttpServletResponse response, ResponseStatus status, T data) throws IOException {
-        print(response, new ApiResponses<T>(status, data));
-    }
+
+
 
 
     public static void print(HttpServletResponse response, ApiResponses model) throws IOException {

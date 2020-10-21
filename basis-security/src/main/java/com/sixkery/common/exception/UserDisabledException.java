@@ -1,4 +1,4 @@
-package com.sixkery.exception;
+package com.sixkery.common.exception;
 
 /**
  * 用户被禁用异常

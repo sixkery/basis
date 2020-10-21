@@ -1,6 +1,6 @@
 package com.sixkery.utils.date;
 
-import com.sixkery.exception.ApiException;
+import com.sixkery.common.exception.ApiException;
 import lombok.Data;
 
 import java.lang.management.ManagementFactory;

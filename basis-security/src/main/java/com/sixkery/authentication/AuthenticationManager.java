@@ -2,7 +2,7 @@
 //
 //import com.sixkery.authentication.provider.AuthenticationProvider;
 //import com.sixkery.authentication.token.Authentication;
-//import com.sixkery.exception.AuthenticationException;
+//import com.sixkery.common.exception.AuthenticationException;
 //
 ///**
 // * Create by Maoning in 2019/11/7

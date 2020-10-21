@@ -1,4 +1,4 @@
-package com.sixkery.exception;
+package com.sixkery.common.exception;
 
 
 import com.sixkery.common.response.ErrorCode;

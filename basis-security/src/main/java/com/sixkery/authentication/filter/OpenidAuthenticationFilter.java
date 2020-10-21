@@ -6,7 +6,7 @@
 //import com.sixkery.authentication.UserDetails;
 //import com.sixkery.authentication.token.Authentication;
 //import com.sixkery.authentication.token.OpenidAuthenticationToken;
-//import com.sixkery.exception.AuthenticationException;
+//import com.sixkery.common.exception.AuthenticationException;
 //import com.sixkery.properties.JwtProperties;
 //import com.sixkery.response.SecurityResponseStatus;
 //import com.sixkery.util.AntPathRequestMatcher;

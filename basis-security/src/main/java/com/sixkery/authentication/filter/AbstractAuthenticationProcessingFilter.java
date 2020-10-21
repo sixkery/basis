@@ -3,9 +3,9 @@
 //import com.sixkery.common.ResponseResults;
 //import com.sixkery.authentication.AuthenticationManager;
 //import com.sixkery.authentication.token.Authentication;
-//import com.sixkery.exception.AuthenticationException;
-//import com.sixkery.exception.UserDisabledException;
-//import com.sixkery.exception.UserNotFoundException;
+//import com.sixkery.common.exception.AuthenticationException;
+//import com.sixkery.common.exception.UserDisabledException;
+//import com.sixkery.common.exception.UserNotFoundException;
 //import com.sixkery.response.SecurityResponseStatus;
 //import org.springframework.web.filter.GenericFilterBean;
 //

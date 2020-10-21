@@ -16,9 +16,6 @@
       <module name="basis-common" target="6" />
       <module name="basis-mbg" target="1.8" />
       <module name="basis-security" target="1.8" />
-      <module name="mall-common" target="1.5" />
-      <module name="mall-mbg" target="1.5" />
-      <module name="mall-security" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,9 +23,6 @@
       <module name="basis-common" options="-parameters" />
       <module name="basis-mbg" options="-parameters" />
       <module name="basis-security" options="-parameters" />
-      <module name="mall-common" options="-parameters" />
-      <module name="mall-mbg" options="-parameters" />
-      <module name="mall-security" options="-parameters" />
     </option>
   </component>
 </project>

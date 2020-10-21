@@ -1,7 +1,6 @@
 package com.sixkery.common.response;
 
 
-import com.sixkery.common.response.ErrorCode;
 
 /**
  * 枚举了一些常用 API 操作码

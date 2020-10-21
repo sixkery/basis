@@ -5,8 +5,8 @@
 //import com.sixkery.authentication.AuthorizationType;
 //import com.sixkery.authentication.token.Authentication;
 //import com.sixkery.authentication.token.JwtAuthenticationToken;
-//import com.sixkery.exception.AuthenticationException;
-//import com.sixkery.exception.JwtAuthenticationException;
+//import com.sixkery.common.exception.AuthenticationException;
+//import com.sixkery.common.exception.JwtAuthenticationException;
 //import com.sixkery.response.SecurityResponseStatus;
 //import io.jsonwebtoken.*;
 //import org.springframework.util.StringUtils;

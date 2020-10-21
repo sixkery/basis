@@ -1,4 +1,4 @@
-package com.sixkery.exception;
+package com.sixkery.common.exception;
 
 import io.jsonwebtoken.JwtException;
 

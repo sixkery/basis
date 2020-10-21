@@ -1,8 +1,6 @@
 package com.sixkery.response;
 
 
-import com.sixkery.ResponseStatus;
-
 /**
  * @author sixkery
  */

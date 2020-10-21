@@ -13,7 +13,7 @@ import java.util.Random;
  * <p>
  * 验证码工具类
  */
-public class VerifyCode {
+public class  VerifyCode {
     /**
      * 生成验证码图片的宽度
      */
