@@ -1,100 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b502cffa-688e-43e1-b620-20bb7e8afc77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/basis-kafka/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/java/com/sixkery/kery/kafka/KeryKafkaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/java/com/sixkery/kery/kafka/controller/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/java/com/sixkery/kery/kafka/controller/KafkaProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/java/com/sixkery/kery/kafka/controller/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-kafka/src/test/java/com/sixkery/kery/security/KeryKafkaApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/BasisSecurityApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/service/UserDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/basis/security/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basis-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/utils/CollectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/utils/CollectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/utils/date/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/basis-common/src/main/java/com/sixkery/utils/date/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basis-security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContextHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContextHolderStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityContextImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/SecurityFilterChain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/ThreadLocalSecurityContextHolderStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/AuthorizeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/access/FilterSecurityInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/AbstractUserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/AuthenticationManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/AuthenticationManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/AuthenticationSuccessfulHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/AuthorizationType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/JwtFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/UserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/UserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/AbstractAuthenticationProcessingFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/CorsFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/JwtAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/OpenidAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/SecurityContextCacheClearFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/filter/UsernamePasswordAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/provider/AbstractAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/provider/AuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/provider/DaoAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/provider/JwtAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/provider/OpenidAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/token/Authentication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/token/JwtAuthenticationToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/token/OpenidAuthenticationToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/authentication/token/UsernamePasswordAuthenticationToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/AccessDeniedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/AuthenticationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/BadCredentialsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/JwtAuthenticationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/ProviderNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/UserDisabledException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/common/exception/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/component/RestAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/component/RestfulAccessDeniedHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/AbstractConfiguredSecurityBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/HttpSecurity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/SecurityBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/SecurityConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/SecurityConfigurerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurityConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/WebSecurityConfigurerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/configurer/CorsConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/configurer/FilterSecurityInterceptorConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/configurer/FormLoginConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/configurer/JwtAuthenticationConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/configuration/configurer/OpenidAuthenticationConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthenticationProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/AuthorizeProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/JwtProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/MobileProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/SecurityProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/properties/WxProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/response/SecurityResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/AntPathRequestMatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/PasswordEncoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/RequestMatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/SecurityContextUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/bcrypt/BCrypt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/util/bcrypt/BCryptPasswordEncoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/Code2SessionOutDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/WxXcxAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/auth/WxXcxAuthException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basis-security/src/main/java/com/sixkery/weixin/constant/WxConst.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b502cffa-688e-43e1-b620-20bb7e8afc77" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +104,7 @@
       <workItem from="1603200173593" duration="5314000" />
       <workItem from="1603290524394" duration="760000" />
       <workItem from="1603728707436" duration="698000" />
-      <workItem from="1604820226614" duration="3245000" />
+      <workItem from="1604820226614" duration="3485000" />
     </task>
     <servers />
   </component>
