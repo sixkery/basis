@@ -6,23 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="kery-kafka" />
         <module name="basis-mbg" />
+        <module name="basis-kafka" />
         <module name="basis-common" />
         <module name="basis-security" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basis" target="1.8" />
-      <module name="basis-common" target="6" />
+      <module name="basis-common" target="1.8" />
+      <module name="basis-kafka" target="1.8" />
       <module name="basis-mbg" target="1.8" />
       <module name="basis-security" target="1.8" />
+      <module name="kery-kafka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="basis-common" options="-parameters" />
+      <module name="basis-kafka" options="-parameters" />
       <module name="basis-mbg" options="-parameters" />
       <module name="basis-security" options="-parameters" />
+      <module name="kery-kafka" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: cloud_dev
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:
+        #nacos服务注册中心地址
+        server-addr: localhost:8848
+      config:
+        #nacos配置中心地址
+        server-addr: localhost:8848
+        #指定yml格式的配置
+        file-extension: yml

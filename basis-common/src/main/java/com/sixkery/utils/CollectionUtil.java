@@ -1,8 +1,10 @@
 package com.sixkery.utils;
 
+import cn.hutool.core.convert.Convert;
 import org.springframework.util.CollectionUtils;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * @author liugang
@@ -53,30 +55,8 @@ public class CollectionUtil extends CollectionUtils {
     }
 
     public static void main(String[] args) {
-        List<String> listA = Arrays.asList("1", "2");
-        List<String> listB = Arrays.asList("1", "2", "3", "4");
-
-        if (StringUtils.hasText("12")) {
-            System.out.println("listB = " + listB);
-        }
-
-        //1、交集
-        List<String> jiaoList = new ArrayList<>(listB);
-        jiaoList.removeAll(listA);
-        System.out.println(jiaoList);
-        //输出:[3, 4]
-
-//        //2、差集
-//        List<String> chaList = new ArrayList<>(listA);
-//        chaList.removeAll(listB);
-//        System.out.println(chaList);
-//        //输出:[1, 2]
-//
-//        //3、并集 (先做差集再做添加所有）
-//        List<String> bingList = new ArrayList<>(listA);
-//        bingList.removeAll(listB); // bingList为 [1, 2]
-//        bingList.addAll(listB);  //添加[3,4,5,6]
-//        System.out.println(bingList);
-        //输出:[1, 2, 3, 4, 5, 6]
+        String a = "q";
+        Integer integer = Convert.toInt(a, 0);
+        System.out.println("integer = " + integer);
     }
 }

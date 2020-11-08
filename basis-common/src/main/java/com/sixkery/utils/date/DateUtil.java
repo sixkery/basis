@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.lang.management.ManagementFactory;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
@@ -34,6 +37,38 @@ public class DateUtil {
     private static final String MONTH_PATTERN = "yyyy-MM";
     private static final String YEAR_PATTERN = "yyyy";
     private static final String MINUTE_ONLY_PATTERN = "mm";
+
+
+    /**
+     * localDate 转 Date
+     *
+     * @param localDate localDate
+     * @return date
+     */
+    public static Date toDate(LocalDate localDate) {
+        return toDate(localDate.atTime(LocalTime.now(ZoneId.systemDefault())));
+    }
+
+    /**
+     * LocalDateTime 转 Date
+     *
+     * @param localDateTime localDateTime
+     * @return date
+     */
+    public static Date toDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+    }
+
+    /**
+     * Date转 LocalDateTime
+     *
+     * @param date Date
+     * @return LocalDateTime
+     */
+    public static LocalDateTime toLocalDateTime(Date date) {
+        return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
+    }
+
 
     /**
      * 根据 1 2 3 4 获取今日，最近七天， 最近十五天， 最近三十天的时间区间

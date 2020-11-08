@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/basis.iml" filepath="$PROJECT_DIR$/basis.iml" />
       <module fileurl="file://$PROJECT_DIR$/basis-common/basis-common.iml" filepath="$PROJECT_DIR$/basis-common/basis-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basis-kafka/basis-kafka.iml" filepath="$PROJECT_DIR$/basis-kafka/basis-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/basis-mbg/basis-mbg.iml" filepath="$PROJECT_DIR$/basis-mbg/basis-mbg.iml" />
       <module fileurl="file://$PROJECT_DIR$/basis-security/basis-security.iml" filepath="$PROJECT_DIR$/basis-security/basis-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basis-kafka/kery-kafka.iml" filepath="$PROJECT_DIR$/basis-kafka/kery-kafka.iml" />
     </modules>
   </component>
 </project>

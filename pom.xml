@@ -12,6 +12,7 @@
         <module>basis-common</module>
         <module>basis-mbg</module>
         <module>basis-security</module>
+        <module>basis-kafka</module>
     </modules>
 
     <parent>
