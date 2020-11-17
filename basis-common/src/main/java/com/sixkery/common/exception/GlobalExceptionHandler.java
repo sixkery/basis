@@ -3,6 +3,9 @@ package com.sixkery.common.exception;
 import com.sixkery.common.response.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -40,6 +43,19 @@ public class GlobalExceptionHandler {
         } else {
             return ApiResponses.failed(e.getMessage());
         }
+    }
+
+    /**
+     * 参数验证异常
+     * @param e 异常
+     * @return 返回结果
+     */
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ApiResponses<String> handleMethodArgumentException(MethodArgumentNotValidException e){
+        log.error("参数异常 = {}",e.toString());
+        BindingResult bindingResult = e.getBindingResult();
+        FieldError fieldError = bindingResult.getFieldError();
+        return ApiResponses.failed("参数不正确！");
     }
 
 }

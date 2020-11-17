@@ -1,0 +1,16 @@
+server:
+  port: 8500
+
+
+
+
+
+
+jwt:
+  header: jwtHeader
+  secret: eyJleHAiOjE1NDMyMDUyODUsInN1YiI6ImFkbWluIiwiY3JlYXRlZCI6MTU0MDYxMzI4N # 密钥
+  expiration: 1000 * 60 * 60 * 12                                               # 过期时间 毫秒
+  route:
+    login: /auth/login
+    refresh: /auth/refresh
+    register: /auth/register

@@ -1,15 +1,17 @@
 package com.sixkery.basis.security.util;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.auth0.jwt.interfaces.JWTVerifier;
+import com.sixkery.basis.security.entity.UserEntity;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
-import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * JWT 生成解析
@@ -17,83 +19,155 @@ import java.util.Date;
  * @author sixkery
  * @date 2020/10/27
  */
+@Data
+@Component
+@ConfigurationProperties(prefix = "jwt")
 public class JwtUtil {
 
-    /**
-     * 设置过期时间 24 hour
-     */
-    private static final int EXPIRE_TIME = 24 * 60 * 1000;
-    /**
-     * 自己设定的密钥
-     */
-    private static final String SECRET = "SIXKERY";
+//    /**
+//     * 设置过期时间 24 hour
+//     */
+//    private static final int EXPIRE_TIME = 24 * 60 * 1000;
+//    /**
+//     * 自己设定的密钥
+//     */
+//    private static final String SECRET = "SIXKERY";
+//
+//    /**
+//     * token 的前缀
+//     */
+//    private static final String TOKEN_PREFIX = "Bearer ";
+//    /**
+//     * 表头授权
+//     */
+//    private static final String AUTHORIZATION = "Authorization";
+
 
     /**
-     * token 的前缀
+     * 密钥
      */
-    private static final String TOKEN_PREFIX = "Bearer ";
+    private String secret;
+
     /**
-     * 表头授权
+     * 过期时间
      */
-    private static final String AUTHORIZATION = "Authorization";
+    private Long expiration;
+
+    /**
+     * token 头信息
+     */
+    private String header;
 
 
     /**
-     * 根据用户名创建 token
+     * 从数据声明生成令牌
      *
-     * @param username 用户名
-     * @return token
+     * @param claims 数据声明
+     * @return 令牌
      */
-    private static String generateToken(String username) {
-        Calendar calendar = Calendar.getInstance();
-        // 设置签发时间
-        calendar.setTime(new Date());
-        calendar.add(Calendar.SECOND, EXPIRE_TIME);
-        Date expiration = calendar.getTime();
-        // 生成 token
-        String jwt = Jwts.builder()
-                .setIssuer("sixkery")
-                .setIssuedAt(new Date())
-                .claim("username", username)
-                .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS256, SECRET)
-                .compact();
-
-        // jwt 前面一般都会加 Bearer
-        return TOKEN_PREFIX + jwt;
+    private String generateToken(Map<String, Object> claims) {
+        Date expirationDate = new Date(System.currentTimeMillis() + expiration);
+        return Jwts.builder()
+                .setClaims(claims)
+                .setExpiration(expirationDate)
+                .signWith(SignatureAlgorithm.HS512, secret).compact();
     }
 
     /**
-     * 校验token是否正确
+     * 从令牌中获取数据声明
      *
-     * @param token  密钥
-     * @param secret 用户的密码
-     * @return 是否正确
+     * @param token 令牌
+     * @return 数据声明
      */
-    public static boolean verify(String token, String username, String secret) {
+    private Claims getClaimsFromToken(String token) {
+        Claims claims;
         try {
-            Algorithm algorithm = Algorithm.HMAC256(secret);
-            JWTVerifier verifier = JWT.require(algorithm)
-                    .withClaim("username", username)
-                    .build();
-            DecodedJWT jwt = verifier.verify(token);
-            return true;
+            claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+        } catch (Exception e) {
+            claims = null;
+        }
+        return claims;
+    }
+
+    /**
+     * 生成令牌
+     *
+     * @param userDetails 用户
+     * @return 令牌
+     */
+    public String generateToken(UserDetails userDetails) {
+        Map<String, Object> claims = new HashMap<>(2);
+        claims.put("sub", userDetails.getUsername());
+        claims.put("created", new Date());
+        return generateToken(claims);
+    }
+
+
+    /**
+     * 从令牌中获取用户名
+     *
+     * @param token 令牌
+     * @return 用户名
+     */
+    public String getUsernameFromToken(String token) {
+        String username;
+        try {
+            Claims claims = getClaimsFromToken(token);
+            username = claims.getSubject();
+        } catch (Exception e) {
+            username = null;
+        }
+        return username;
+    }
+
+
+    /**
+     * 判断令牌是否过期
+     *
+     * @param token 令牌
+     * @return 是否过期
+     */
+    public Boolean isTokenExpired(String token) {
+        try {
+            Claims claims = getClaimsFromToken(token);
+            Date expiration = claims.getExpiration();
+            return expiration.before(new Date());
         } catch (Exception e) {
             return false;
         }
     }
 
     /**
-     * 获得token中的信息无需secret解密也能获得
+     * 刷新令牌
      *
-     * @return token中包含的用户名
+     * @param token 原令牌
+     * @return 新令牌
      */
-    public static String getUsername(String token) {
+    public String refreshToken(String token) {
+        String refreshedToken;
         try {
-            DecodedJWT jwt = JWT.decode(token);
-            return jwt.getClaim("username").asString();
-        } catch (JWTDecodeException e) {
-            return null;
+            Claims claims = getClaimsFromToken(token);
+            claims.put("created", new Date());
+            refreshedToken = generateToken(claims);
+        } catch (Exception e) {
+            refreshedToken = null;
         }
+        return refreshedToken;
     }
+
+    /**
+     * 验证令牌
+     *
+     * @param token       令牌
+     * @param userDetails 用户
+     * @return 是否有效
+     */
+    public Boolean validateToken(String token, UserDetails userDetails) {
+        UserEntity user = (UserEntity) userDetails;
+        String username = getUsernameFromToken(token);
+        return (username.equals(user.getUsername()) && !isTokenExpired(token));
+    }
+}
+
+
 }
