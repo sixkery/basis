@@ -1,7 +1,6 @@
 package com.sixkery.basis.security.service;
 
 import com.sixkery.basis.security.entity.UserEntity;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,7 +8,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.stream.Collectors;
 
 /**
  * 实现官方的 UserDetailsService 接口 从数据库中获取用户信息

@@ -80,6 +80,16 @@ public class ApiResponses<T> {
     /**
      * 失败返回结果
      *
+     * @param errorCode 错误码
+     * @param message   错误信息
+     */
+    public static <T> ApiResponses<T> failed(Integer code, String message) {
+        return new ApiResponses<T>(code, message, null);
+    }
+
+    /**
+     * 失败返回结果
+     *
      * @param message 提示信息
      */
     public static <T> ApiResponses<T> failed(String message) {
