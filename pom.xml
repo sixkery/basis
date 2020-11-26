@@ -10,7 +10,7 @@
 
     <modules>
         <module>basis-common</module>
-        <module>basis-mbg</module>
+        <module>basis-api</module>
         <module>basis-security</module>
         <module>basis-kafka</module>
         <module>basis-gateway</module>
@@ -59,16 +59,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+<!--        </dependency>-->
 <!--        hutool 工具包-->
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.4.5</version>
-        </dependency>
+
         <!--JWT(Json Web Token)登录支持-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -110,11 +106,7 @@
                 <artifactId>basis-common</artifactId>
                 <version>${basis-common.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.sixkery.basis</groupId>
-                <artifactId>basis-mbg</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>

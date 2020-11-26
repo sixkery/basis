@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author sixkery
  */
 @SpringBootApplication
-@MapperScan("com.sixkery.basis.api.mapper")
+@MapperScan("com.sixkery.basis.api.system.mapper")
 @EnableSwagger2
 public class BasisApiApplication {
 

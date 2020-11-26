@@ -53,6 +53,14 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.sixkery.basis</groupId>
+			<artifactId>basis-common</artifactId>
+		</dependency>
+
+
+
+
 	</dependencies>
 	<build>
 		<plugins>
