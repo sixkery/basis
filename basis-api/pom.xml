@@ -3,9 +3,9 @@
 				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>basis-mbg</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>basis-mbg</name>
+	<artifactId>basis-api</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>basis-api</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -63,6 +63,7 @@
 		<dependency>
 			<groupId>com.sixkery.basis</groupId>
 			<artifactId>basis-common</artifactId>
+			<version>${basis-common.version}</version>
 		</dependency>
 
 

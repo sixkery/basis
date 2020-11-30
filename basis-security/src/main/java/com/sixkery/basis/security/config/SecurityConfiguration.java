@@ -46,10 +46,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         httpSecurity.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // 前后端分离是 STATELESS，故 session 使用该策略
-                .and().authorizeRequests()
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll() // OPTIONS请求全部放行
-                .antMatchers("/auth/**").permitAll()  //登录和注册的接口放行，其他接口全部接受验证
-                .antMatchers("/druid/**").anonymous()
+                .and().authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll() // OPTIONS请求全部放行
+                .antMatchers("/auth/**").permitAll()  //登录和注册的接口放行，其他接口全部接受验证.antMatchers("/druid/**").anonymous()
                 .anyRequest().authenticated()
                 .and().headers().cacheControl();
 

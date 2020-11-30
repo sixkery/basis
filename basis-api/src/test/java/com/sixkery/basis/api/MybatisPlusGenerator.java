@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.config;
+package java.com.sixkery.basis.api;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -102,6 +102,7 @@ public class MybatisPlusGenerator {
         strategy.setRestControllerStyle(true);
         //驼峰转连字符
         strategy.setControllerMappingHyphenStyle(true);
+        // 去掉表的前缀
         strategy.setTablePrefix("tb_");
         mpg.setStrategy(strategy);
         mpg.execute();

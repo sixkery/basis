@@ -41,7 +41,7 @@
         <logstash-logback.version>4.8</logstash-logback.version>
         <minio.version>3.0.10</minio.version>
         <basis-common.version>1.0-SNAPSHOT</basis-common.version>
-        <basis-mbg.version>1.0-SNAPSHOT</basis-mbg.version>
+        <basis-api.version>1.0-SNAPSHOT</basis-api.version>
         <basis-security.version>1.0-SNAPSHOT</basis-security.version>
     </properties>
 
@@ -105,6 +105,12 @@
                 <groupId>com.sixkery.basis</groupId>
                 <artifactId>basis-common</artifactId>
                 <version>${basis-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sixkery.basis</groupId>
+                <artifactId>basis-api</artifactId>
+                <version>${basis-api.version}</version>
             </dependency>
 
             <dependency>

@@ -1,7 +1,6 @@
 package com.sixkery.common.response;
 
 
-
 /**
  * 枚举了一些常用 API 操作码
  *
@@ -16,7 +15,10 @@ public enum ResultCode implements ErrorCode {
     /**
      * 操作失败
      */
-    FAILED(500, "操作失败"),
+    FAILED(20001, "操作失败"),
+
+    passwordError(20002, "密码不正确"),
+    USER_NOT_EXIST_EXCEPTION(20002, "用户不存在"),
     /**
      * 参数检验失败
      */
@@ -43,7 +45,6 @@ public enum ResultCode implements ErrorCode {
         this.code = code;
         this.message = message;
     }
-
 
 
     @Override
