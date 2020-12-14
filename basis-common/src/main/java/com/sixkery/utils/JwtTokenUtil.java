@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -30,6 +29,23 @@ import java.util.Map;
 
 @Slf4j
 public class JwtTokenUtil {
+
+    /**
+     * 签名密钥
+     */
+    private static final String SECRET = "qYYjXt7s1C*nEC%9RCwQGFA$YwPr$Jrj";
+
+    /**
+     * 签名算法
+     */
+    private static final SignatureAlgorithm SIGNATURE_ALGORITHM = SignatureAlgorithm.HS512;
+
+    /**
+     * token前缀
+     */
+    private static final String TOKEN_PREFIX = "Bearer ";
+
+
     private static final String CLAIM_KEY_USERNAME = "sub";
     private static final String CLAIM_KEY_CREATED = "created";
     private static final int THIRTY_MINUTES = 30 * 60;
@@ -102,17 +118,7 @@ public class JwtTokenUtil {
         return username;
     }
 
-    /**
-     * 验证token是否还有效
-     *
-     * @param token       token
-     * @param userDetails 从数据库中查询出来的用户信息
-     * @return 布尔值
-     */
-//    public  boolean validateToken(String token, UserDetails userDetails) {
-//        String username = getUsernameFromToken(token);
-//        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
-//    }
+
 
     /**
      * 判断token是否已经失效
@@ -132,19 +138,6 @@ public class JwtTokenUtil {
         Claims claims = getClaimsFromToken(token);
         return claims.getExpiration();
     }
-
-    /**
-     * 根据用户信息生成token
-     *
-     * @param userDetails 用户信息
-     * @return token
-     */
-//    public String generateToken(UserDetails userDetails) {
-//        HashMap<String, Object> claims = new HashMap<>();
-//        claims.put(CLAIM_KEY_USERNAME, userDetails.getUsername());
-//        claims.put(CLAIM_KEY_CREATED, new Date());
-//        return generateToken(claims);
-//    }
 
     /**
      * 当原来的token没有过期是可以刷新的
@@ -170,7 +163,7 @@ public class JwtTokenUtil {
             return null;
         }
         // 判断 token 是否在30分钟内刷新过，返回原来的token
-        if (tokenRefreshJustBefore(token, THIRTY_MINUTES)) {
+        if (tokenRefreshJustBefore(token)) {
             return token;
         } else {
             claims.put(CLAIM_KEY_CREATED, new Date());
@@ -179,11 +172,11 @@ public class JwtTokenUtil {
 
     }
 
-    private boolean tokenRefreshJustBefore(String token, int time) {
+    private boolean tokenRefreshJustBefore(String token) {
         Claims claims = getClaimsFromToken(token);
         Date created = claims.get(CLAIM_KEY_CREATED, Date.class);
         Date refreshDate = new Date();
-        return refreshDate.after(created) && refreshDate.before(DateUtil.offsetSecond(created, time));
+        return refreshDate.after(created) && refreshDate.before(DateUtil.offsetSecond(created, JwtTokenUtil.THIRTY_MINUTES));
     }
 
 }

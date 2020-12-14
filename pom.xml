@@ -1,154 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sixkery.basis</groupId>
-    <artifactId>basis</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 
-    <modules>
-        <module>basis-common</module>
-        <module>basis-api</module>
-        <module>basis-security</module>
-        <module>basis-kafka</module>
-        <module>basis-gateway</module>
-    </modules>
+	<groupId>com.sixkery.basis</groupId>
+	<artifactId>basis</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <skipTests>true</skipTests>
-        <docker.host>http://192.168.3.101:2375</docker.host>
-        <docker.maven.plugin.version>1.1.0</docker.maven.plugin.version>
-        <druid.version>1.1.10</druid.version>
-        <swagger2.version>2.7.0</swagger2.version>
-        <mybatis-generator.version>1.3.7</mybatis-generator.version>
-        <mybatis.version>3.4.6</mybatis.version>
-        <mysql-connector.version>8.0.16</mysql-connector.version>
-        <spring-data-commons.version>2.1.5.RELEASE</spring-data-commons.version>
-        <jjwt.version>0.9.0</jjwt.version>
-        <aliyun-oss.version>2.5.0</aliyun-oss.version>
-        <logstash-logback.version>4.8</logstash-logback.version>
-        <minio.version>3.0.10</minio.version>
-        <basis-common.version>1.0-SNAPSHOT</basis-common.version>
-        <basis-api.version>1.0-SNAPSHOT</basis-api.version>
-        <basis-security.version>1.0-SNAPSHOT</basis-security.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
-<!--        hutool 工具包-->
-
-        <!--JWT(Json Web Token)登录支持-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
-        </dependency>
+	<modules>
+		<module>basis-common</module>
+		<module>basis-api</module>
+		<module>basis-security</module>
+		<module>basis-kafka</module>
+		<module>basis-gateway</module>
+	</modules>
 
 
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-        </dependency>
-        <!--mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
-            <scope>runtime</scope>
-        </dependency>
-        <!--redis依赖配置-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
+	<!--    统一 jar 包管理-->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<skipTests>true</skipTests>
+		<spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+		<docker.maven.plugin.version>1.1.0</docker.maven.plugin.version>
+		<druid.version>1.1.10</druid.version>
+		<swagger2.version>2.7.0</swagger2.version>
+		<mybatis-generator.version>1.3.7</mybatis-generator.version>
+		<mybatis.version>3.4.6</mybatis.version>
+		<mysql-connector.version>8.0.16</mysql-connector.version>
+		<spring-data-commons.version>2.1.5.RELEASE</spring-data-commons.version>
+		<jjwt.version>0.9.0</jjwt.version>
+		<aliyun-oss.version>2.5.0</aliyun-oss.version>
+		<logstash-logback.version>4.8</logstash-logback.version>
+		<minio.version>3.0.10</minio.version>
+		<basis-common.version>1.0-SNAPSHOT</basis-common.version>
+		<basis-api.version>1.0-SNAPSHOT</basis-api.version>
+		<basis-security.version>1.0-SNAPSHOT</basis-security.version>
+	</properties>
 
-    <dependencyManagement>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<type>pom</type>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
-        <dependencies>
 
-            <dependency>
-                <groupId>com.sixkery.basis</groupId>
-                <artifactId>basis-common</artifactId>
-                <version>${basis-common.version}</version>
-            </dependency>
+		<!--        <dependency>-->
+		<!--            <groupId>org.springframework.boot</groupId>-->
+		<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+		<!--        </dependency>-->
+		<!--        hutool 工具包-->
 
-            <dependency>
-                <groupId>com.sixkery.basis</groupId>
-                <artifactId>basis-api</artifactId>
-                <version>${basis-api.version}</version>
-            </dependency>
+		<!--JWT(Json Web Token)登录支持-->
+<!--		<dependency>-->
+<!--			<groupId>io.jsonwebtoken</groupId>-->
+<!--			<artifactId>jjwt</artifactId>-->
+<!--			<version>0.9.0</version>-->
+<!--		</dependency>-->
 
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
 
-            <!--Swagger-UI API文档生产工具-->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger2.version}</version>
-            </dependency>
-            <!-- 阿里云OSS -->
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun-oss.version}</version>
-            </dependency>
-            <!--集成logstash-->
-            <dependency>
-                <groupId>net.logstash.logback</groupId>
-                <artifactId>logstash-logback-encoder</artifactId>
-                <version>${logstash-logback.version}</version>
-            </dependency>
-            <!--MinIO JAVA SDK-->
-            <dependency>
-                <groupId>io.minio</groupId>
-                <artifactId>minio</artifactId>
-                <version>${minio.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
+		<!--mysql-->
+
+		<!--redis依赖配置-->
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- 阿里云OSS -->
+
 
 </project>

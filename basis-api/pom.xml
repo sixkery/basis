@@ -21,6 +21,7 @@
 			<version>3.4.0</version>
 		</dependency>
 
+
 		<!--mybatis-plus 自动代码生成-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
@@ -35,22 +36,17 @@
 			<version>2.2</version>
 		</dependency>
 
-		<!--Mysql数据库驱动-->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.16</version>
-		</dependency>
 
 		<!--swagger-->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger2.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger2.version}</version>
 		</dependency>
 
 		<!--swagger ui 增强依赖-->
@@ -65,7 +61,6 @@
 			<artifactId>basis-common</artifactId>
 			<version>${basis-common.version}</version>
 		</dependency>
-
 
 	</dependencies>
 	<build>
