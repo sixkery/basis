@@ -1,8 +1,8 @@
-package com.sixkery.basis.api.system.service.impl;
+package com.sixkery.basis.api.service.impl;
 
-import com.sixkery.basis.api.system.entity.Menu;
-import com.sixkery.basis.api.system.mapper.MenuMapper;
-import com.sixkery.basis.api.system.service.MenuService;
+import com.sixkery.basis.api.entity.Menu;
+import com.sixkery.basis.api.mapper.MenuMapper;
+import com.sixkery.basis.api.service.MenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -1,12 +1,12 @@
-package com.sixkery.basis.api.system.service.impl;
+package com.sixkery.basis.api.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.sixkery.basis.api.system.entity.User;
-import com.sixkery.basis.api.system.mapper.UserMapper;
-import com.sixkery.basis.api.system.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sixkery.basis.api.entity.User;
+import com.sixkery.basis.api.mapper.UserMapper;
+import com.sixkery.basis.api.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,6 +21,7 @@ import javax.annotation.Resource;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
     @Resource
     private UserMapper userMapper;
 
@@ -29,8 +30,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         IPage<User> page = new Page<>(1L, 8L);
         QueryWrapper<User> objectQueryWrapper = new QueryWrapper<>();
         objectQueryWrapper.select();
-        IPage<User> userIPage = userMapper.selectPage(page, objectQueryWrapper);
-        return userIPage;
+        return userMapper.selectPage(page, objectQueryWrapper);
 
 
     }

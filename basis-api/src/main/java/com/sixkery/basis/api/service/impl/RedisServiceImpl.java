@@ -1,4 +1,4 @@
-package com.sixkery.service.impl;
+package com.sixkery.basis.api.service.impl;
 
 import com.sixkery.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;

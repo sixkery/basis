@@ -1,6 +1,6 @@
-package com.sixkery.basis.api.system.service;
+package com.sixkery.basis.api.service;
 
-import com.sixkery.basis.api.system.entity.Role;
+import com.sixkery.basis.api.entity.Role;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

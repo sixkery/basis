@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.system.entity;
+package com.sixkery.basis.api.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;

@@ -1,9 +1,9 @@
-package com.sixkery.basis.api.system.controller;
+package com.sixkery.basis.api.web.controller;
 
 
-import com.sixkery.basis.api.system.controller.form.UserFormDTO;
-import com.sixkery.basis.api.system.entity.User;
-import com.sixkery.basis.api.system.service.UserService;
+import com.sixkery.basis.api.web.dto.form.UserFormDTO;
+import com.sixkery.basis.api.entity.User;
+import com.sixkery.basis.api.service.UserService;
 import com.sixkery.common.exception.ApiException;
 import com.sixkery.common.response.ApiResponses;
 import com.sixkery.common.response.ResultCode;
@@ -38,6 +38,7 @@ public class UserController {
         return ApiResponses.ok(userService.findAll());
     }
 
+
     @ApiOperation(value = "查询单个用户", notes = "根据ID查询单个用户")
     @GetMapping("/{id}")
     public ApiResponses findOne(@PathVariable("id") Long id) {
@@ -54,10 +55,6 @@ public class UserController {
     public ApiResponses insert(@RequestBody @Validated List<UserFormDTO> userFormDTOs, BindingResult bindingResult) {
 
 
-        User user = userService.getById(id);
-        if (user == null) {
-            throw new ApiException(ResultCode.USER_NOT_EXIST_EXCEPTION);
-        }
         return ApiResponses.ok();
     }
 }

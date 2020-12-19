@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.system.controller;
+package com.sixkery.basis.api.web.dto;
 
 import javax.validation.Valid;
 import java.util.*;
@@ -6,6 +6,7 @@ import java.util.*;
 /**
  * FileName: ValidList
  * DESCRIPTION: 参数校验工具类, 用于校验List<E> 类型的请求参数
+ * @author sixkery
 
  */
 public class ValidList<E> implements List<E> {

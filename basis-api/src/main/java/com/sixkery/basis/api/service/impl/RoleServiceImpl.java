@@ -1,8 +1,8 @@
-package com.sixkery.basis.api.system.service.impl;
+package com.sixkery.basis.api.service.impl;
 
-import com.sixkery.basis.api.system.entity.Role;
-import com.sixkery.basis.api.system.mapper.RoleMapper;
-import com.sixkery.basis.api.system.service.RoleService;
+import com.sixkery.basis.api.entity.Role;
+import com.sixkery.basis.api.mapper.RoleMapper;
+import com.sixkery.basis.api.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.system.controller.form;
+package com.sixkery.basis.api.web.dto.form;
 
 import lombok.Data;
 

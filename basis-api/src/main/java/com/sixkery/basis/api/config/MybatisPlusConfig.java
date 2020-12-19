@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import org.springframework.context.annotation.Bean;
 
 /**
+ * mybatis-plus 配置
+ *
  * @author sixkery
  * @date 2020/11/29
  */
@@ -13,6 +15,7 @@ public class MybatisPlusConfig {
 
     /**
      * 配置分页插件
+     *
      * @return 返回
      */
     @Bean

@@ -13,8 +13,6 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * @author sixkery
- * @date 2020/4/16
  * JWT 生成的工具类
  * JWT token的格式：header.payload.signature
  * <p>
@@ -25,6 +23,9 @@ import java.util.Map;
  * {"sub":"wang","created":1489079981393,"exp":1489684781}
  * signature(签名)的生成算法：
  * HMACSHA512(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret)
+ *
+ * @author sixkery
+ * @date 2020/4/16
  */
 
 @Slf4j
@@ -117,7 +118,6 @@ public class JwtTokenUtil {
         }
         return username;
     }
-
 
 
     /**

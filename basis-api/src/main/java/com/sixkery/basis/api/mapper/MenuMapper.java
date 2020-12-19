@@ -1,6 +1,6 @@
-package com.sixkery.basis.api.system.mapper;
+package com.sixkery.basis.api.mapper;
 
-import com.sixkery.basis.api.system.entity.Menu;
+import com.sixkery.basis.api.entity.Menu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

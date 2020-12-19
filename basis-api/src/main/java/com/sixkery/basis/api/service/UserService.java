@@ -1,8 +1,7 @@
-package com.sixkery.basis.api.system.service;
+package com.sixkery.basis.api.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.sixkery.basis.api.system.entity.User;
+import com.sixkery.basis.api.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
