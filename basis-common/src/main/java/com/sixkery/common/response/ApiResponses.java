@@ -1,11 +1,7 @@
 package com.sixkery.common.response;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  * 对 ApiResponses 快捷封装,通用返回对象
@@ -34,9 +30,8 @@ public class ApiResponses<T> {
     }
 
 
-
     public static <T> ApiResponses<T> ok() {
-        return ok((T) null);
+        return ok(null);
     }
 
     /**
@@ -45,7 +40,7 @@ public class ApiResponses<T> {
      * @param data 获取的数据
      */
     public static <T> ApiResponses<T> ok(T data) {
-        return new ApiResponses<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
+        return new ApiResponses<>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
     }
 
     /**
@@ -55,7 +50,7 @@ public class ApiResponses<T> {
      * @param message 提示信息
      */
     public static <T> ApiResponses<T> success(T data, String message) {
-        return new ApiResponses<T>(ResultCode.SUCCESS.getCode(), message, data);
+        return new ApiResponses<>(ResultCode.SUCCESS.getCode(), message, data);
     }
 
     /**
@@ -64,7 +59,7 @@ public class ApiResponses<T> {
      * @param errorCode 错误码
      */
     public static <T> ApiResponses<T> failed(ErrorCode errorCode) {
-        return new ApiResponses<T>(errorCode.getCode(), errorCode.getMessage(), null);
+        return new ApiResponses<>(errorCode.getCode(), errorCode.getMessage(), null);
     }
 
     /**
@@ -74,17 +69,17 @@ public class ApiResponses<T> {
      * @param message   错误信息
      */
     public static <T> ApiResponses<T> failed(ErrorCode errorCode, String message) {
-        return new ApiResponses<T>(errorCode.getCode(), message, null);
+        return new ApiResponses<>(errorCode.getCode(), message, null);
     }
 
     /**
      * 失败返回结果
      *
-     * @param errorCode 错误码
-     * @param message   错误信息
+     * @param code    错误码
+     * @param message 错误信息
      */
     public static <T> ApiResponses<T> failed(Integer code, String message) {
-        return new ApiResponses<T>(code, message, null);
+        return new ApiResponses<>(code, message, null);
     }
 
     /**
@@ -93,7 +88,7 @@ public class ApiResponses<T> {
      * @param message 提示信息
      */
     public static <T> ApiResponses<T> failed(String message) {
-        return new ApiResponses<T>(ResultCode.FAILED.getCode(), message, null);
+        return new ApiResponses<>(ResultCode.FAILED.getCode(), message, null);
     }
 
     /**
@@ -116,37 +111,34 @@ public class ApiResponses<T> {
      * @param message 提示信息
      */
     public static <T> ApiResponses<T> validateFailed(String message) {
-        return new ApiResponses<T>(ResultCode.VALIDATE_FAILED.getCode(), message, null);
+        return new ApiResponses<>(ResultCode.VALIDATE_FAILED.getCode(), message, null);
     }
 
     /**
      * 未登录返回结果
      */
     public static <T> ApiResponses<T> unauthorized(T data) {
-        return new ApiResponses<T>(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
+        return new ApiResponses<>(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
     }
 
     /**
      * 未授权返回结果
      */
     public static <T> ApiResponses<T> forbidden(T data) {
-        return new ApiResponses<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+        return new ApiResponses<>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
 
 
-
-
-
-
-    public static void print(HttpServletResponse response, ApiResponses model) throws IOException {
-        // 如果ResponseStatus的值小于等于1000且不等于200，那么就算是失败的请求，这里设置对应的响应状态
-        int rsCode = model.getCode();
-        if (rsCode < 1000 && rsCode != 200) {
-            response.setStatus(rsCode);
-        }
-        response.setCharacterEncoding("UTF-8");
-        response.setHeader("Content-Type", "application/json");
-        new ObjectMapper().writer().writeValue(response.getOutputStream(), model);
-    }
+//
+//    public static void print(HttpServletResponse response, ApiResponses model) throws IOException {
+//        // 如果ResponseStatus的值小于等于1000且不等于200，那么就算是失败的请求，这里设置对应的响应状态
+//        int rsCode = model.getCode();
+//        if (rsCode < 1000 && rsCode != 200) {
+//            response.setStatus(rsCode);
+//        }
+//        response.setCharacterEncoding("UTF-8");
+//        response.setHeader("Content-Type", "application/json");
+//        new ObjectMapper().writer().writeValue(response.getOutputStream(), model);
+//    }
 
 }
