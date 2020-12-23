@@ -30,7 +30,8 @@ public enum ResultCode implements ErrorCode {
     /**
      * 没有相关权限
      */
-    FORBIDDEN(403, "没有相关权限");
+    FORBIDDEN(403, "没有相关权限"),
+    API_PARAMS_ERROR(504, "参数校验异常");
 
     /**
      * 状态码
