@@ -1,9 +1,9 @@
 package com.sixkery.utils;
 
 import cn.hutool.core.collection.CollUtil;
-import com.sixkery.common.Constant;
-import com.sixkery.common.exception.ApiException;
-import com.sixkery.common.response.ResultCode;
+import com.sixkery.Constant;
+import com.sixkery.exception.ApiException;
+import com.sixkery.response.ResultCode;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
 package com.sixkery.basis.security.filter;
 
-import com.sixkery.common.response.ApiResponses;
+import com.sixkery.response.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

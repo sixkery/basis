@@ -1,8 +1,8 @@
 package com.sixkery.basis.security.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.sixkery.common.response.ApiResponses;
-import com.sixkery.common.response.ResultCode;
+import com.sixkery.response.ApiResponses;
+import com.sixkery.response.ResultCode;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

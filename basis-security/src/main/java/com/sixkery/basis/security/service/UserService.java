@@ -3,7 +3,7 @@ package com.sixkery.basis.security.service;
 import com.sixkery.basis.security.entity.UserEntity;
 import com.sixkery.basis.security.mapper.UserMapper;
 import com.sixkery.basis.security.util.JwtUtil;
-import com.sixkery.common.response.ApiResponses;
+import com.sixkery.response.ApiResponses;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
