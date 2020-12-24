@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+
 /**
  * <p>
  * 时间工具类
@@ -128,8 +129,7 @@ public class DateUtil {
 
     public static void main(String[] args) {
         DateInterval interval = DateUtil.getInterval(4);
-        System.out.println("interval = " + interval.getStartTime());
-        System.out.println("interval = " + interval.getEndTime());
+
     }
 
 }
