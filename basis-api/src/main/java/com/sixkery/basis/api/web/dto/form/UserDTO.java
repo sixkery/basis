@@ -1,31 +1,21 @@
-package com.sixkery.basis.api.entity;
+package com.sixkery.basis.api.web.dto.form;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.time.LocalDateTime;
 
 /**
- * <p>
- * 用户表
- * </p>
- *
  * @author sixkery
- * @since 2020-11-27
+ * @date 2020/12/7
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@TableName("tb_user")
-@ApiModel(value = "User对象", description = "用户表")
-public class User {
+public class UserDTO {
 
     @ApiModelProperty(value = "用户ID")
-    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     @ApiModelProperty(value = "用户名")
@@ -48,6 +38,7 @@ public class User {
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
 
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "修改时间")
     private LocalDateTime modifiedTime;
 
@@ -67,6 +58,5 @@ public class User {
 
     @ApiModelProperty(value = "部门id")
     private Long departmentId;
-
 
 }

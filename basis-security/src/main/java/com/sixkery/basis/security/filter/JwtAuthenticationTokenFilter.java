@@ -1,7 +1,7 @@
 package com.sixkery.basis.security.filter;
 
 import com.sixkery.basis.security.util.JwtUtil;
-import com.sixkery.utils.StringUtils;
+import com.sixkery.utils.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -39,9 +39,9 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         // 从 request 中获取 token
         String header = request.getHeader(jwtUtil.getHeader());
-        if (StringUtils.isNotEmpty(header)) {
+        if (StringUtil.isNotEmpty(header)) {
             String username = jwtUtil.getUsernameFromToken(header);
-            if (StringUtils.isNotEmpty(username) && SecurityContextHolder.getContext().getAuthentication() != null) {
+            if (StringUtil.isNotEmpty(username) && SecurityContextHolder.getContext().getAuthentication() != null) {
                 // 查询数据库 获得用户名密码
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
                 // 验证 token 是否正确

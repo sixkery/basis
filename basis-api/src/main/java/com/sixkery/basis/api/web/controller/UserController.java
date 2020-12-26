@@ -47,7 +47,7 @@ public class UserController {
         if (user == null) {
             throw new ApiException(ResultCode.USER_NOT_EXIST_EXCEPTION);
         }
-        return ApiResponses.ok();
+        return ApiResponses.ok(user);
     }
 
     @ApiOperation(value = "新增用户", notes = "新增用户")
