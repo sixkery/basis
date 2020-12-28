@@ -1,14 +1,14 @@
 package com.sixkery.basis.api.web.controller;
 
 
-import com.sixkery.basis.api.web.dto.form.UserFormDTO;
 import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.service.UserService;
-import com.sixkery.exception.ApiException;
+import com.sixkery.basis.api.web.dto.form.UserDTO;
+import com.sixkery.basis.api.web.dto.form.UserFormDTO;
 import com.sixkery.response.ApiResponses;
-import com.sixkery.response.ResultCode;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -44,10 +44,9 @@ public class UserController {
     public ApiResponses findOne(@PathVariable("id") Long id) {
 
         User user = userService.getById(id);
-        if (user == null) {
-            throw new ApiException(ResultCode.USER_NOT_EXIST_EXCEPTION);
-        }
-        return ApiResponses.ok(user);
+        UserDTO userDto = new UserDTO();
+        BeanUtils.copyProperties(user, userDto);
+        return ApiResponses.ok(userDto);
     }
 
     @ApiOperation(value = "新增用户", notes = "新增用户")

@@ -1,45 +1,27 @@
 package com.sixkery.basis.api.config;
 
 
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
-import org.springframework.boot.jackson.JsonComponent;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.TimeZone;
 
 /**
- * 全局日期格式化
+ * 全局日期格式化处理 可支持 date 和 localDateTime 类型
  *
  * @author sixkery
  * @date 2020/12/14
  */
-@JsonComponent
-public class DateFormatConfig {
+@Configuration
+public class DateFormConfig {
 
     @Value("${spring.jackson.date-format:yyyy-MM-dd HH:mm:ss}")
     private String pattern;
 
-
-    @Bean
-    public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilder() {
-
-        return builder -> {
-            TimeZone tz = TimeZone.getTimeZone("UTC");
-            DateFormat df = new SimpleDateFormat(pattern);
-            df.setTimeZone(tz);
-            builder.failOnEmptyBeans(false)
-                    .failOnUnknownProperties(false)
-                    .featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-                    .dateFormat(df);
-        };
-    }
 
     @Bean
     public LocalDateTimeSerializer localDateTimeDeserializer() {
@@ -50,4 +32,6 @@ public class DateFormatConfig {
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
         return builder -> builder.serializerByType(LocalDateTime.class, localDateTimeDeserializer());
     }
+
+
 }
