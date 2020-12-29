@@ -2,6 +2,7 @@ package com.sixkery.response;
 
 
 import lombok.Data;
+import org.apache.poi.ss.formula.functions.T;
 
 /**
  * 对 ApiResponses 快捷封装,通用返回对象
@@ -20,7 +21,7 @@ public class ApiResponses<T> {
 
     private long timestamp;
 
-    public ApiResponses(int code, String message, T data) {
+    private ApiResponses(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;

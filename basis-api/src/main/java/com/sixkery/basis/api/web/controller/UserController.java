@@ -1,6 +1,7 @@
 package com.sixkery.basis.api.web.controller;
 
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.service.UserService;
 import com.sixkery.basis.api.web.dto.form.UserDTO;
@@ -34,7 +35,7 @@ public class UserController {
 
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @GetMapping("/findAll")
-    public ApiResponses findAll() {
+    public ApiResponses<IPage<User>> findAll() {
         return ApiResponses.ok(userService.findAll());
     }
 
