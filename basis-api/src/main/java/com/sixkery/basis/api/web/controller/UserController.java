@@ -2,6 +2,7 @@ package com.sixkery.basis.api.web.controller;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.github.pagehelper.PageInfo;
 import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.service.UserService;
 import com.sixkery.basis.api.web.dto.form.UserDTO;
@@ -35,7 +36,7 @@ public class UserController {
 
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @GetMapping("/findAll")
-    public ApiResponses<IPage<User>> findAll() {
+    public ApiResponses<PageInfo> findAll() {
         return ApiResponses.ok(userService.findAll());
     }
 
@@ -52,8 +53,7 @@ public class UserController {
 
     @ApiOperation(value = "新增用户", notes = "新增用户")
     @PostMapping("/insert")
-    public ApiResponses insert(@RequestBody @Validated List<UserFormDTO> userFormDTOs, BindingResult bindingResult) {
-
+    public ApiResponses insert(@RequestBody UserFormDTO userForm) {
 
         return ApiResponses.ok();
     }

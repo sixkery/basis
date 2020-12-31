@@ -1,8 +1,8 @@
 package com.sixkery.basis.api.service;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.sixkery.basis.api.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.pagehelper.PageInfo;
+import com.sixkery.basis.api.entity.User;
 
 /**
  * <p>
@@ -14,6 +14,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface UserService extends IService<User> {
 
-    IPage<User> findAll();
+    /**
+     * 分页查询用户信息
+     *
+     * @return 返回结果
+     */
+    PageInfo findAll();
 
 }
