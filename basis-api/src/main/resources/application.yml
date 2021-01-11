@@ -45,12 +45,13 @@ mybatis-plus:
       logic-not-delete-value: 0       # 逻辑未删除值 (默认为 0)
   mapper-locations: classpath*:/mapper/*.xml
 
+############# 分页插件PageHelper配置 #############
 pagehelper:
-  helper-dialect: mysql      # 数据源类型
-  params:
-    count: countSql          # 计算总条数
-  reasonable: false
+  helper-dialect: mysql
+  reasonable: true
   support-methods-arguments: true
+  page-size-zero: true
+  params: count=countSql
 logging:
   level:
     com.sixkery.basis.api: debug

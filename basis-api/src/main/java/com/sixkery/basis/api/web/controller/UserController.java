@@ -1,7 +1,6 @@
 package com.sixkery.basis.api.web.controller;
 
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.pagehelper.PageInfo;
 import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.service.UserService;
@@ -11,12 +10,9 @@ import com.sixkery.response.ApiResponses;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * <p>
@@ -36,7 +32,7 @@ public class UserController {
 
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @GetMapping("/findAll")
-    public ApiResponses<PageInfo> findAll() {
+    public ApiResponses<PageInfo<User>> findAll() {
         return ApiResponses.ok(userService.findAll());
     }
 
