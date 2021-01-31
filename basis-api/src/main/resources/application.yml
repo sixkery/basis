@@ -5,18 +5,17 @@ spring:
   application:
     name: nineWeb
   datasource:
-    url: jdbc:mysql://localhost:3306/xinguan?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
-    password: sixkery
-    type: com.zaxxer.hikari.HikariDataSource
+    password: sixkery@G5
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.31.23:3306/medicine?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=FALSE
     hikari:
-      auto-commit: true
-      connection-timeout: 30000
-      idle-timeout: 30000
-      max-lifetime: 1800000
-      maximum-pool-size: 30
+      idle-timeout: 300000
+      max-lifetime: 600000
+      validation-timeout: 3000
+      connection-timeout: 60000
       minimum-idle: 10
-      pool-name: DatebookHikariCP
+      maximum-pool-size: 20
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

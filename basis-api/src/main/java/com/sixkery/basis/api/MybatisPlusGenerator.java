@@ -1,4 +1,4 @@
-package java.com.sixkery.basis.api;
+package com.sixkery.basis.api;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -10,16 +10,18 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Scanner;
 
 /**
  * mybatis 代码生成器
+ * 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
  *
  * @author sixkery
  */
-// 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
+@Slf4j
 public class MybatisPlusGenerator {
 
     /**
@@ -29,7 +31,7 @@ public class MybatisPlusGenerator {
      */
     public static String scanner(String tip) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入" + tip + "：");
+        log.info("请输入" + tip + "：");
         if (scanner.hasNext()) {
             String ipt = scanner.next();
             if (StringUtils.isNotEmpty(ipt)) {
@@ -66,7 +68,7 @@ public class MybatisPlusGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/xinguan?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/medicine?useUnicode=true&useSSL=FALSE&characterEncoding=UTF-8&serverTimezone=GMT%2B8");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("sixkery");
