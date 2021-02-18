@@ -31,6 +31,12 @@ public class GlobalExceptionHandler {
         return ApiResponses.failed(e.getMessage());
     }
 
+    /**
+     * 业务异常
+     *
+     * @param e 异常信息
+     * @return 返回 json 格式的 info
+     */
     @ExceptionHandler(value = ApiException.class)
     public ApiResponses<Object> handle(ApiException e) {
 
