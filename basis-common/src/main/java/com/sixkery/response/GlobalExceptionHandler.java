@@ -24,8 +24,7 @@ public class GlobalExceptionHandler {
      * @return ApiResponses
      */
     @ExceptionHandler({Exception.class})
-//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ApiResponses uniteExceptionHandler(Exception e) {
+    public ApiResponses<String> uniteExceptionHandler(Exception e) {
         log.error("系统异常", e);
         return ApiResponses.failed(e.getMessage());
     }
