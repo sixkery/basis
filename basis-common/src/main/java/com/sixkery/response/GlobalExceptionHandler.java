@@ -2,10 +2,12 @@ package com.sixkery.response;
 
 import com.sixkery.exception.ApiException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 全局异常处理
@@ -41,15 +43,16 @@ public class GlobalExceptionHandler {
 
     /**
      * 参数验证异常
+     *
      * @param e 异常
      * @return 返回结果
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ApiResponses<String> handleMethodArgumentException(MethodArgumentNotValidException e){
-        log.error("参数异常 = {}",e.toString());
-        BindingResult bindingResult = e.getBindingResult();
-        FieldError fieldError = bindingResult.getFieldError();
-        return ApiResponses.failed("参数不正确！");
+    public ApiResponses<Object> handleMethodArgumentException(MethodArgumentNotValidException e) {
+        log.error("参数异常 = {}", e.toString());
+        List<String> errors = new ArrayList<>();
+        e.getBindingResult().getFieldErrors().forEach(item -> errors.add(item.getDefaultMessage()));
+        return ApiResponses.failed(ResultCode.API_PARAMS_ERROR, errors, "参数不正确！");
     }
 
 }
