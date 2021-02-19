@@ -17,30 +17,26 @@ public enum ResultCode implements ErrorCode {
      */
     FAILED(20001, "操作失败"),
 
-    passwordError(20002, "密码不正确"),
-    USER_NOT_EXIST_EXCEPTION(20002, "用户不存在"),
+    PASSWORD_ERROR(20002, "密码不正确"),
+
+    USER_NOT_EXIST_EXCEPTION(20003, "用户不存在"),
+
+    VALIDATE_FAILED(20004, "该角色已被使用，无法删除"),
     /**
-     * 参数检验失败
+     * 暂未登录或 token 已经过期
      */
-    VALIDATE_FAILED(404, "参数检验失败"),
-    /**
-     * 暂未登录或token已经过期
-     */
-    UNAUTHORIZED(401, "暂未登录或token已经过期"),
-    /**
-     * 没有相关权限
-     */
-    FORBIDDEN(403, "没有相关权限"),
-    API_PARAMS_ERROR(504, "参数校验异常");
+    UNAUTHORIZED(20005, "暂未登录或token已经过期"),
+    FORBIDDEN(20006, "没有相关权限"),
+    API_PARAMS_ERROR(20007, "参数校验异常");
 
     /**
      * 状态码
      */
-    private int code;
+    private final int code;
     /**
      * 返回信息
      */
-    private String message;
+    private final String message;
 
     private ResultCode(int code, String message) {
         this.code = code;
