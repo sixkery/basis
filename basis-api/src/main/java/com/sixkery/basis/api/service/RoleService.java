@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.service;
 
-import com.sixkery.basis.api.entity.Role;
+import com.sixkery.basis.api.entity.RoleDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author sixkery
  * @since 2020-11-27
  */
-public interface RoleService extends IService<Role> {
+public interface RoleService extends IService<RoleDO> {
 
 }

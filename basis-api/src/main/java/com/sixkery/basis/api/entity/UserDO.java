@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @TableName("tb_user")
 @ApiModel(value = "User对象", description = "用户表")
-public class User {
+public class UserDO {
 
     @ApiModelProperty(value = "用户ID")
     @TableId(value = "id", type = IdType.AUTO)

@@ -22,7 +22,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 @TableName("tb_menu")
 @ApiModel(value="Menu对象", description="菜单表")
-public class Menu implements Serializable {
+public class MenuDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
