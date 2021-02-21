@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.page.PageMethod;
-import com.sixkery.basis.api.entity.UserDO;
+import com.sixkery.basis.api.entity.system.UserDO;
 import com.sixkery.basis.api.mapper.UserMapper;
 import com.sixkery.basis.api.service.UserService;
 import org.springframework.stereotype.Service;

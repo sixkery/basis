@@ -2,7 +2,7 @@ package com.sixkery.basis.api.web.controller;
 
 
 import com.github.pagehelper.PageInfo;
-import com.sixkery.basis.api.entity.UserDO;
+import com.sixkery.basis.api.entity.system.UserDO;
 import com.sixkery.basis.api.service.UserService;
 import com.sixkery.basis.api.web.dto.form.UserDTO;
 import com.sixkery.basis.api.web.dto.form.UserFormDTO;

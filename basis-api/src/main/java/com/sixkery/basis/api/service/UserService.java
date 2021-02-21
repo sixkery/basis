@@ -2,7 +2,7 @@ package com.sixkery.basis.api.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.github.pagehelper.PageInfo;
-import com.sixkery.basis.api.entity.UserDO;
+import com.sixkery.basis.api.entity.system.UserDO;
 
 /**
  * <p>

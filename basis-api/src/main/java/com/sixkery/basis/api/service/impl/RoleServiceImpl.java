@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.service.impl;
 
-import com.sixkery.basis.api.entity.RoleDO;
+import com.sixkery.basis.api.entity.system.RoleDO;
 import com.sixkery.basis.api.mapper.RoleMapper;
 import com.sixkery.basis.api.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.mapper;
 
-import com.sixkery.basis.api.entity.UserDO;
+import com.sixkery.basis.api.entity.system.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

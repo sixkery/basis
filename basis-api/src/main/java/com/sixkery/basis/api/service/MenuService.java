@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.service;
 
-import com.sixkery.basis.api.entity.MenuDO;
+import com.sixkery.basis.api.entity.system.MenuDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
