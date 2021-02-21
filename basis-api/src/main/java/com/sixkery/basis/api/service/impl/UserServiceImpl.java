@@ -7,6 +7,8 @@ import com.github.pagehelper.page.PageMethod;
 import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.mapper.UserMapper;
 import com.sixkery.basis.api.service.UserService;
+import com.sixkery.basis.api.web.dto.form.UserDTO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -25,6 +27,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Resource
     private UserMapper userMapper;
+
+    @Override
+    public UserDTO login(UserDTO userDTO) {
+        QueryWrapper<User> objectQueryWrapper = new QueryWrapper<>();
+        objectQueryWrapper.eq("username", userDTO.getUsername()).eq("password",userDTO.getPassword());
+        User user = userMapper.selectOne(objectQueryWrapper);
+        UserDTO userDTO1 = new UserDTO();
+        BeanUtils.copyProperties(user,userDTO1);
+        return userDTO1;
+    }
 
     @Override
     public PageInfo<User> findAll() {

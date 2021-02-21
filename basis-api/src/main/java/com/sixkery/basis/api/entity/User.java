@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.time.LocalDateTime;
-
 /**
  * <p>
  * 用户表
@@ -20,9 +18,9 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("tb_user")
+@TableName("sys_user")
 @ApiModel(value = "User对象", description = "用户表")
-public class User {
+public class User extends BaseDO {
 
     @ApiModelProperty(value = "用户ID")
     @TableId(value = "id", type = IdType.AUTO)
@@ -31,42 +29,20 @@ public class User {
     @ApiModelProperty(value = "用户名")
     private String username;
 
+    @ApiModelProperty(value = "昵称")
     private String nickname;
-
-    @ApiModelProperty(value = "邮箱")
-    private String email;
-
-    @ApiModelProperty(value = "头像")
-    private String avatar;
-
-    @ApiModelProperty(value = "联系电话")
-    private String phoneNumber;
-
-    @ApiModelProperty(value = "状态 0锁定 1有效")
-    private Integer status;
-
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createTime;
-
-    @ApiModelProperty(value = "修改时间")
-    private LocalDateTime modifiedTime;
-
-    @ApiModelProperty(value = "性别 0男 1女 2保密")
-    private Integer sex;
-
-    @ApiModelProperty(value = "盐")
-    private String salt;
-
-    @ApiModelProperty(value = "0:超级管理员，1：系统用户")
-    private Integer type;
 
     @ApiModelProperty(value = "密码")
     private String password;
 
-    private LocalDateTime birth;
+    @ApiModelProperty(value = "头像")
+    private String avatar;
 
-    @ApiModelProperty(value = "部门id")
-    private Long departmentId;
+    @ApiModelProperty(value = "性别 0男 1女 2保密")
+    private String gender;
+
+    @ApiModelProperty(value = "状态 0锁定 1有效")
+    private Integer status;
 
 
 }

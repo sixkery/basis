@@ -16,6 +16,10 @@ public class UserDTO {
     @ApiModelProperty(value = "用户名")
     private String username;
 
+
+    @ApiModelProperty(value = "用户名")
+    private String password;
+
     private String nickname;
 
     @ApiModelProperty(value = "邮箱")

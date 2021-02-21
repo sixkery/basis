@@ -24,11 +24,17 @@ import javax.annotation.Resource;
  */
 @Api(value = "系统用户模块", tags = "系统用户接口")
 @RestController
-@RequestMapping("/system/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Resource
     private UserService userService;
+
+    @ApiOperation(value = "登录", notes = "登录")
+    @PostMapping("/login")
+    public ApiResponses<UserDTO> login(@RequestBody UserDTO userDTO) {
+        return ApiResponses.ok(userService.login(userDTO));
+    }
 
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @GetMapping("/findAll")
