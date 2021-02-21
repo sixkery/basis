@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.config.properties;
+package com.sixkery.basis.security.config.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
