@@ -18,7 +18,7 @@ import java.io.IOException;
  * @date 2020/11/19
  */
 @Component
-public class RewriteAccessDenyFilter implements AccessDeniedHandler {
+public class RestAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)
             throws IOException {

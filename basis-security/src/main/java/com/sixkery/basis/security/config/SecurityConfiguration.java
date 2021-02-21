@@ -1,7 +1,7 @@
 package com.sixkery.basis.security.config;
 
 import com.sixkery.basis.security.filter.JwtAuthenticationTokenFilter;
-import com.sixkery.basis.security.filter.RewriteAccessDenyFilter;
+import com.sixkery.basis.security.filter.RestAccessDeniedHandler;
 import com.sixkery.basis.security.service.UserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -39,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     //自定义无权限访问拦截器
     @Resource
-    private RewriteAccessDenyFilter rewriteAccessDenyFilter;
+    private RestAccessDeniedHandler restAccessDeniedHandler;
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
@@ -52,7 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().headers().cacheControl();
 
         httpSecurity.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
-        httpSecurity.exceptionHandling().accessDeniedHandler(rewriteAccessDenyFilter);
+        httpSecurity.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
     }
 
     // 此处配置 AuthenticationManager，并且实现缓存

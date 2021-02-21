@@ -42,7 +42,7 @@ public class UserService {
         return userMapper.findUsername(username);
     }
 
-    public ApiResponses login(String username, String password) {
+    public ApiResponses<String> login(String username, String password) {
         UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
 
         Authentication authenticate = authenticationManager.authenticate(token);
