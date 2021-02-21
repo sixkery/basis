@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "basis.token.redis",
+      "type": "java.lang.String",
+      "description": "Description for basis.token.redis."
+    }
+
+  ] }

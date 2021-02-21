@@ -55,6 +55,32 @@ basis:
     # 错误超过次数后多少分钟后才能继续登录（分钟）
     loginAfterTime: 10
 
+# 忽略 url
+ignored:
+  # 无需登录认证的请求
+  urls:
+    - /xboot/oauth2/**
+    - /xboot/actuator/**
+    - /xboot/admin/**
+    - /xboot/dictData/getByType/**
+    - /xboot/user/regist
+    - /xboot/common/**
+    - /druid/**
+    - /doc.html
+    - /swagger-resources/**
+    - /v2/api-docs
+    - /**/*.js
+    - /**/*.css
+    - /**/*.png
+    - /**/*.ico
+    - /xboot/test/**
+  # 限流及黑名单不拦截的路径
+  limitUrls:
+    - /**/*.js
+    - /**/*.css
+    - /**/*.png
+    - /**/*.ico
+
 # 日志输出级别
 logging:
   level:
