@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.mapper;
 
-import com.sixkery.basis.api.entity.Menu;
+import com.sixkery.basis.api.entity.system.MenuDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author sixkery
  * @since 2020-11-27
  */
-public interface MenuMapper extends BaseMapper<Menu> {
+public interface MenuMapper extends BaseMapper<MenuDO> {
 
 }

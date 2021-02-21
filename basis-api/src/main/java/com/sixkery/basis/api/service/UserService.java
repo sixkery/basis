@@ -1,10 +1,9 @@
 package com.sixkery.basis.api.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.github.pagehelper.PageInfo;
-import com.sixkery.basis.api.entity.User;
 import com.sixkery.basis.api.web.dto.form.UserDTO;
+import com.sixkery.basis.api.entity.system.UserDO;
 
 /**
  * <p>
@@ -14,12 +13,11 @@ import com.sixkery.basis.api.web.dto.form.UserDTO;
  * @author sixkery
  * @since 2020-11-27
  */
-public interface UserService extends IService<User> {
+public interface UserService extends IService<UserDO> {
 
     /**
      * 登录
-     * @param username 用户名
-     * @param password 密码
+     * @param userDTO 用户名 密码
      * @return 结果
      */
     UserDTO login(UserDTO userDTO);
@@ -29,6 +27,6 @@ public interface UserService extends IService<User> {
      *
      * @return 返回结果
      */
-    PageInfo<User> findAll();
+    PageInfo<UserDO> findAll();
 
 }

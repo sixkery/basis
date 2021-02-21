@@ -2,7 +2,7 @@ package com.sixkery.basis.api.web.controller;
 
 
 import com.github.pagehelper.PageInfo;
-import com.sixkery.basis.api.entity.User;
+import com.sixkery.basis.api.entity.system.UserDO;
 import com.sixkery.basis.api.service.UserService;
 import com.sixkery.basis.api.web.dto.form.UserDTO;
 import com.sixkery.basis.api.web.dto.form.UserFormDTO;
@@ -38,7 +38,7 @@ public class UserController {
 
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @GetMapping("/findAll")
-    public ApiResponses<PageInfo<User>> findAll() {
+    public ApiResponses<PageInfo<UserDO>> findAll() {
         return ApiResponses.ok(userService.findAll());
     }
 
@@ -47,9 +47,9 @@ public class UserController {
     @GetMapping("/{id}")
     public ApiResponses findOne(@PathVariable("id") Long id) {
 
-        User user = userService.getById(id);
+        UserDO userDO = userService.getById(id);
         UserDTO userDto = new UserDTO();
-        BeanUtils.copyProperties(user, userDto);
+        BeanUtils.copyProperties(userDO, userDto);
         return ApiResponses.ok(userDto);
     }
 

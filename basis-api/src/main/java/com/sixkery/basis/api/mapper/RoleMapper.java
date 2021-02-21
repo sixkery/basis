@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.mapper;
 
-import com.sixkery.basis.api.entity.Role;
+import com.sixkery.basis.api.entity.system.RoleDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author sixkery
  * @since 2020-11-27
  */
-public interface RoleMapper extends BaseMapper<Role> {
+public interface RoleMapper extends BaseMapper<RoleDO> {
 
 }

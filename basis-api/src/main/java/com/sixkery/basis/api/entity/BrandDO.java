@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Data
 @TableName("pms_brand")
-public class Brand implements Serializable {
+public class BrandDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

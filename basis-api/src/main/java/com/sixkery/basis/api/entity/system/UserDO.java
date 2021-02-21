@@ -1,4 +1,4 @@
-package com.sixkery.basis.api.entity;
+package com.sixkery.basis.api.entity.system;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -20,7 +20,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 @TableName("sys_user")
 @ApiModel(value = "User对象", description = "用户表")
-public class User extends BaseDO {
+public class UserDO {
 
     @ApiModelProperty(value = "用户ID")
     @TableId(value = "id", type = IdType.AUTO)

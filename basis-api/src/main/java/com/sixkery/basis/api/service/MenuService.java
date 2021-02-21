@@ -1,6 +1,6 @@
 package com.sixkery.basis.api.service;
 
-import com.sixkery.basis.api.entity.Menu;
+import com.sixkery.basis.api.entity.system.MenuDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author sixkery
  * @since 2020-11-27
  */
-public interface MenuService extends IService<Menu> {
+public interface MenuService extends IService<MenuDO> {
 
 }

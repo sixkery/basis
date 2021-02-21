@@ -73,6 +73,10 @@ public class ApiResponses<T> {
         return new ApiResponses<>(errorCode.getCode(), message, null);
     }
 
+    public static <T> ApiResponses<T> failed(ErrorCode errorCode, T t ,String message) {
+        return new ApiResponses<>(errorCode.getCode(), message, t);
+    }
+
     /**
      * 失败返回结果
      *
