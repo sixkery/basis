@@ -1,6 +1,6 @@
 package com.sixkery.basis.security.service;
 
-import com.sixkery.basis.security.entity.UserEntity;
+import com.sixkery.basis.security.entity.UserDO;
 import com.sixkery.basis.security.mapper.UserMapper;
 import com.sixkery.basis.security.util.JwtUtil;
 import com.sixkery.response.ApiResponses;
@@ -38,7 +38,7 @@ public class UserService {
      * @param username 用户名
      * @return 用户信息，密码，权限 等
      */
-    public UserEntity findByUsername(String username) {
+    public UserDO findByUsername(String username) {
         return userMapper.findUsername(username);
     }
 

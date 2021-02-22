@@ -1,6 +1,6 @@
 package com.sixkery.basis.security.util;
 
-import com.sixkery.basis.security.entity.UserEntity;
+import com.sixkery.basis.security.entity.UserDO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -163,7 +163,7 @@ public class JwtUtil {
      * @return 是否有效
      */
     public Boolean validateToken(String token, UserDetails userDetails) {
-        UserEntity user = (UserEntity) userDetails;
+        UserDO user = (UserDO) userDetails;
         String username = getUsernameFromToken(token);
         return (username.equals(user.getUsername()) && !isTokenExpired(token));
     }

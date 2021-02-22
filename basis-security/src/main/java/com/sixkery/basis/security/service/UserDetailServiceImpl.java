@@ -1,6 +1,6 @@
 package com.sixkery.basis.security.service;
 
-import com.sixkery.basis.security.entity.UserEntity;
+import com.sixkery.basis.security.entity.UserDO;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,11 +22,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserEntity userEntity = userService.findByUsername(username);
-        if (userEntity == null) {
+        UserDO userDO = userService.findByUsername(username);
+        if (userDO == null) {
             throw new UsernameNotFoundException("用户名不存在！");
         }
 
-        return new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getAuthorities());
+        return new User(userDO.getUsername(), userDO.getPassword(), userDO.getAuthorities());
     }
 }

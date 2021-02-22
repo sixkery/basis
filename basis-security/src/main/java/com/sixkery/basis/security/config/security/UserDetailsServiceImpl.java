@@ -1,7 +1,11 @@
 package com.sixkery.basis.security.config.security;
 
+import com.sixkery.basis.security.entity.UserDO;
+import com.sixkery.basis.security.mapper.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+
+import javax.annotation.Resource;
 
 /**
  * 实现 security 登录的接口
@@ -9,8 +13,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  * @author sixkery
  */
 public class UserDetailsServiceImpl implements UserDetailsService {
+
+    @Resource
+    private UserMapper userMapper;
+
     @Override
-    public UserDetails loadUserByUsername(String s) {
+    public UserDetails loadUserByUsername(String username) {
+        UserDO username1 = userMapper.findUsername(username);
+
+
         return null;
     }
 }
