@@ -43,5 +43,5 @@ public class UserDO {
     /**
      * 状态
      */
-    private Integer state;
+    private Integer status;
 }

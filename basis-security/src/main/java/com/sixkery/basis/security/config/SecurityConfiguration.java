@@ -1,5 +1,7 @@
 package com.sixkery.basis.security.config;
 
+import com.sixkery.basis.security.config.properties.IgnoreUrlProperties;
+import com.sixkery.basis.security.config.properties.TokenProperties;
 import com.sixkery.basis.security.filter.JwtAuthenticationTokenFilter;
 import com.sixkery.basis.security.filter.RestAccessDeniedHandler;
 import com.sixkery.basis.security.service.UserDetailServiceImpl;
@@ -21,15 +23,26 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import javax.annotation.Resource;
 
 /**
- * security 的配置
+ * security 核心配置类
+ * 开启注解控制权到 controller
  *
  * @author sixkery
  * @date 2020/11/8
  */
 
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true) // 开启方法级别的安全控制
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+
+    @Resource
+    private TokenProperties tokenProperties;
+
+
+    @Resource
+    private IgnoreUrlProperties ignoreUrlProperties;
+
+
 
     @Resource
     private UserDetailServiceImpl userDetailService;
