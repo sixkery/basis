@@ -23,7 +23,7 @@ public class SecurityUserDetails extends UserDO implements UserDetails {
             this.setPassword(user.getPassword());
             this.setStatus(user.getStatus());
 
-            this.permissions = user.getPermissions();
+            this.permissions = user.get();
             this.roles = user.getRoles();
         }
     }
