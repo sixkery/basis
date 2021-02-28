@@ -1,6 +1,6 @@
 package com.sixkery.basis.security.service;
 
-import com.sixkery.basis.security.entity.UserDO;
+import com.sixkery.basis.security.mapper.vo.UserVo;
 
 /**
  * @author sixkery
@@ -16,7 +16,7 @@ public interface UserService {
      * @param username 用户名
      * @return 用户信息，密码，权限 等
      */
-    public UserDO findByUsername(String username);
+    public UserVo findByUsername(String username);
 
 
     /**
@@ -25,7 +25,7 @@ public interface UserService {
      * @param mobile 手机号
      * @return 用户信息，密码，权限 等
      */
-    public UserDO findByMobile(String mobile);
+    public UserVo findByMobile(String mobile);
 
 
     /**
@@ -34,6 +34,6 @@ public interface UserService {
      * @param email 邮箱
      * @return 用户信息，密码，权限 等
      */
-    public UserDO findByEmail(String email);
+    public UserVo findByEmail(String email);
 
 }

@@ -1,7 +1,7 @@
 package com.sixkery.basis.security.service;
 
-import com.sixkery.basis.security.entity.UserDO;
 import com.sixkery.basis.security.mapper.UserMapper;
+import com.sixkery.basis.security.mapper.vo.UserVo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -24,18 +24,18 @@ public class UserServiceImpl implements UserService {
      * @return 用户信息，密码，权限 等
      */
     @Override
-    public UserDO findByUsername(String username) {
+    public UserVo findByUsername(String username) {
         return userMapper.findUsername(username);
     }
 
     @Override
-    public UserDO findByMobile(String mobile) {
-        return null;
+    public UserVo findByMobile(String mobile) {
+        return userMapper.findByMobile(mobile);
     }
 
     @Override
-    public UserDO findByEmail(String email) {
-        return null;
+    public UserVo findByEmail(String email) {
+        return userMapper.findByEmail(email);
     }
 
 

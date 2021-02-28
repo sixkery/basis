@@ -1,7 +1,7 @@
 package com.sixkery.basis.security.mapper;
 
 
-import com.sixkery.basis.security.entity.UserDO;
+import com.sixkery.basis.security.mapper.vo.UserVo;
 
 /**
  * @author sixkery
@@ -14,5 +14,21 @@ public interface UserMapper {
      * @param username 用户名
      * @return 用户实体
      */
-    UserDO findUsername(String username);
+    UserVo findUsername(String username);
+
+    /**
+     * 根据用户名查找用户实体
+     *
+     * @param mobile 用户名
+     * @return 用户实体
+     */
+    UserVo findByMobile(String mobile);
+
+    /**
+     * 根据用户名查找用户实体
+     *
+     * @param email 用户名
+     * @return 用户实体
+     */
+    UserVo findByEmail(String email);
 }

@@ -2,18 +2,57 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sixkery.basis.security.mapper.UserMapper">
 
-    <select id="findUsername" >
-      SELECT r.id id, name, r.data_type
-      FROM t_user_role ur
-      LEFT JOIN t_role r
-      ON ur.role_id = r.id
-      WHERE user_Id = #{userId}
+    <select id="findUsername" resultType="com.sixkery.basis.security.mapper.vo.UserVo">
+        SELECT
+            u.username,
+            r.id,
+            r.NAME,
+            p.component,
+            p.title,
+            p.path
+        FROM
+            t_user u
+                JOIN t_user_role ur ON u.id = ur.user_id
+                JOIN t_role r ON r.id = ur.role_id
+                JOIN t_role_permission rp ON r.id = rp.role_id
+                JOIN t_permission p ON rp.permission_id = p.id
+        WHERE
+            u.username = #{username}
+    </select>
+    <select id="findByMobile" resultType="com.sixkery.basis.security.mapper.vo.UserVo">
+        SELECT
+            u.username,
+            r.id,
+            r.NAME,
+            p.component,
+            p.title,
+            p.path
+        FROM
+            t_user u
+                JOIN t_user_role ur ON u.id = ur.user_id
+                JOIN t_role r ON r.id = ur.role_id
+                JOIN t_role_permission rp ON r.id = rp.role_id
+                JOIN t_permission p ON rp.permission_id = p.id
+        WHERE
+            u.mobile = #{mobile}
     </select>
 
-    <select id="findDepIdsByUserId" resultType="java.lang.String">
-        SELECT DISTINCT rd.department_id
-        FROM t_role_department rd
-        WHERE role_id IN
-        ( SELECT ur.role_id FROM t_user_role ur WHERE ur.user_id = #{userId} )
+    <select id="findByEmail" resultType="com.sixkery.basis.security.mapper.vo.UserVo">
+        SELECT
+            u.username,
+            r.id,
+            r.NAME,
+            p.component,
+            p.title,
+            p.path
+        FROM
+            t_user u
+                JOIN t_user_role ur ON u.id = ur.user_id
+                JOIN t_role r ON r.id = ur.role_id
+                JOIN t_role_permission rp ON r.id = rp.role_id
+                JOIN t_permission p ON rp.permission_id = p.id
+        WHERE
+            u.email = #{email}
     </select>
+
 </mapper>

@@ -2,6 +2,7 @@ package com.sixkery.basis.security.config.security;
 
 import com.sixkery.basis.security.entity.UserDO;
 import com.sixkery.basis.security.mapper.UserMapper;
+import com.sixkery.basis.security.mapper.vo.UserVo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -19,7 +20,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) {
-        UserDO username1 = userMapper.findUsername(username);
+        UserVo userVo = userMapper.findUsername(username);
+
 
 
         return null;
