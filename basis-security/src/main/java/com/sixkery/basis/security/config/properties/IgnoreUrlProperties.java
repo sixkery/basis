@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 配置忽略的 url
  * @author sixkery
  */
 @Data

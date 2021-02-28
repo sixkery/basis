@@ -17,7 +17,9 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author Exrickx
+ * 配置用户的角色和权限
+ *
+ * @author sixkery
  */
 @Slf4j
 public class SecurityUserDetails extends UserVo implements UserDetails {

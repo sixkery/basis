@@ -43,9 +43,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private IgnoreUrlProperties ignoreUrlProperties;
 
 
-
     @Resource
     private UserDetailServiceImpl userDetailService;
+
+
 
     @Resource
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
