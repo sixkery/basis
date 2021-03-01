@@ -1,4 +1,4 @@
-package com.sixkery.kery.kafka.controller;
+package com.sixkery.kery.mq.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;

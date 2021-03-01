@@ -1,4 +1,4 @@
-package com.sixkery.kery.kafka;
+package com.sixkery.kery.mq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

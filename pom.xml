@@ -21,6 +21,7 @@
 		<module>basis-security</module>
 		<module>basis-kafka</module>
 		<module>basis-gateway</module>
+		<module>basis-mq</module>
 	</modules>
 
 

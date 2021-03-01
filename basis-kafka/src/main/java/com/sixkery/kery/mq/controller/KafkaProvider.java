@@ -1,4 +1,4 @@
-package com.sixkery.kery.kafka.controller;
+package com.sixkery.kery.mq.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
