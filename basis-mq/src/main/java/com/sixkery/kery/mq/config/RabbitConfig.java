@@ -1,5 +1,7 @@
 package com.sixkery.kery.mq.config;
 
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +37,16 @@ public class RabbitConfig {
     public DirectExchange orderExchange() {
 
         return new DirectExchange("orderExchange", true, false);
+    }
+
+    /**
+     * 将队列和交换机绑定
+     *
+     * @return 绑定
+     */
+    @Bean
+    public Binding bindingConfig() {
+        return BindingBuilder.bind(orderQueue()).to(orderExchange()).with("orderRouting");
     }
 
 
