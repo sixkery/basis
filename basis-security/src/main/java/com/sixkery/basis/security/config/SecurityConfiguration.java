@@ -47,7 +47,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private UserDetailServiceImpl userDetailService;
 
 
-
     @Resource
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
