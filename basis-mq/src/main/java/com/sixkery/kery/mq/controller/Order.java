@@ -2,6 +2,7 @@ package com.sixkery.kery.mq.controller;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
  * @date 2020/10/25
  */
 @Data
-public class Order {
+public class Order implements Serializable {
     /**
      * 订单 ID
      */
