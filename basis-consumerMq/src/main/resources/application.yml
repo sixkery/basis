@@ -1,8 +1,8 @@
 server:
-  port: 8500
+  port: 8600
 spring:
   application:
-    name: mq
+    name: consumer-mq
   rabbitmq:
     host: localhost
     port: 5672

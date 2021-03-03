@@ -1,4 +1,4 @@
-package com.sixkery.kery.mq.controller;
+package com.sixkery.kery.consumermq.controller;
 
 import lombok.Data;
 
