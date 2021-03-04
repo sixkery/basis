@@ -18,8 +18,9 @@ public class MqApplicationTests {
     @Resource
     private MqConsumer mqConsumer;
 
+
     @Test
-    public void contextLoads() {
+     void contextLoads() {
         mqProvider.sendMessage();
     }
 
