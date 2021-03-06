@@ -8,9 +8,9 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>com.sixkery</groupId>
-	<artifactId>basis-providerMq</artifactId>
+	<artifactId>basis-producerMq</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>basis-providerMq</name>
+	<name>basis-producerMq</name>
 	<description>Demo project for Spring Boot</description>
 
 

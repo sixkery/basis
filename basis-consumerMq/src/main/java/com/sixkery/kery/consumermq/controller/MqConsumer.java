@@ -21,7 +21,7 @@ public class MqConsumer {
     public void consume(String orderStr) {
 
         Order order = JSON.parseObject(orderStr, Order.class);
-        System.out.println("order = " + order);
+        log.info("消费者消费的数据 = {}", order);
     }
 
 }
