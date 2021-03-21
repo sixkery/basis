@@ -1,4 +1,4 @@
-package com.sixkery.service;
+package com.sixkery.basis.api.service;
 
 /**
  * @author sixkery
@@ -14,7 +14,6 @@ public interface RedisService {
      * @param key   key
      * @param value value
      */
-    void set(String key, String value);
 
     /**
      * 根据key获取数据
