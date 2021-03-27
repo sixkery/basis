@@ -32,12 +32,12 @@ public class SecurityConstant {
     public static final String SAVE_LOGIN = "saveLogin";
 
     /**
-     * 交互token前缀key
+     * 交互 token前缀 key
      */
     public static final String TOKEN_PRE = "TOKEN_PRE:";
 
     /**
-     * 用户token前缀key 单点登录使用
+     * 用户 token前缀 key 单点登录使用
      */
     public static final String USER_TOKEN = "USER_TOKEN:";
 }
