@@ -7,6 +7,7 @@ import com.sixkery.basis.security.config.properties.TokenProperties;
 import com.sixkery.basis.security.dto.TokenUserDto;
 import com.sixkery.basis.security.util.RedisUtil;
 import com.sixkery.basis.security.util.constant.SecurityConstant;
+import com.sixkery.utils.ResponseUtil;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;

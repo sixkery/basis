@@ -13,6 +13,9 @@ import java.util.Map;
 @Slf4j
 public class ResponseUtil {
 
+    private ResponseUtil() {
+    }
+
     /**
      * 使用response输出JSON
      *
