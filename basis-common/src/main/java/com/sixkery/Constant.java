@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Constant {
-    //异常类型
     public static final String DELIMITER_TO = "@";
     public static final String DELIMITER_COLON = ":";
 
@@ -43,12 +42,12 @@ public class Constant {
     /**
      * 全部数据权限
      */
-    Integer DATA_TYPE_ALL = 0;
+    public static final Integer DATA_TYPE_ALL = 0;
 
     /**
      * 自定义数据权限
      */
-    public static final  Integer DATA_TYPE_CUSTOM = 1;
+    public static final Integer DATA_TYPE_CUSTOM = 1;
 
     /**
      * 本部门及以下

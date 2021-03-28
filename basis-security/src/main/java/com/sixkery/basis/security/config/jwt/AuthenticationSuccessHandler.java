@@ -2,8 +2,9 @@ package com.sixkery.basis.security.config.jwt;
 
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
+import com.google.gson.Gson;
 import com.sixkery.basis.security.config.properties.TokenProperties;
-import com.sixkery.basis.security.util.IpInfoUtil;
+import com.sixkery.basis.security.dto.TokenUserDto;
 import com.sixkery.basis.security.util.RedisUtil;
 import com.sixkery.basis.security.util.constant.SecurityConstant;
 import io.jsonwebtoken.Jwts;
@@ -41,7 +42,7 @@ public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticatio
 
         // 用户选择保存登录状态几天(记住我)
         String saveLogin = request.getParameter(SecurityConstant.SAVE_LOGIN);
-        boolean saved = true;
+        boolean saved = false;
         if (StrUtil.isNotBlank(saveLogin) && Boolean.parseBoolean(saveLogin)) {
             saved = true;
             if (!tokenProperties.getRedis()) {
@@ -56,21 +57,21 @@ public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticatio
         for (GrantedAuthority g : authorities) {
             list.add(g.getAuthority());
         }
-        // 登陆成功生成token
+        // 登陆成功生成 token
         String token;
         if (tokenProperties.getRedis()) {
             // redis
             token = IdUtil.simpleUUID();
-            TokenUser user = new TokenUser(username, list, saved);
+            TokenUserDto user = new TokenUserDto(username, list, saved);
             // 不缓存权限
             if (!tokenProperties.getStorePerms()) {
                 user.setPermissions(null);
             }
-            // 单设备登录 之前的token失效
+            // 单设备登录 之前的 token 失效
             if (tokenProperties.getSdl()) {
                 String oldToken = redisUtil.get(SecurityConstant.USER_TOKEN + username);
                 if (StrUtil.isNotBlank(oldToken)) {
-                    redisUtil.delete(SecurityConstant.TOKEN_PRE + oldToken);
+                    redisUtil.delKey(SecurityConstant.TOKEN_PRE + oldToken);
                 }
             }
             if (saved) {
