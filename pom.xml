@@ -47,6 +47,7 @@
 		<basis-common.version>1.0-SNAPSHOT</basis-common.version>
 		<basis-api.version>1.0-SNAPSHOT</basis-api.version>
 		<basis-security.version>1.0-SNAPSHOT</basis-security.version>
+		<basis-gateway.version>1.0-SNAPSHOT</basis-gateway.version>
 	</properties>
 
 	<dependencyManagement>

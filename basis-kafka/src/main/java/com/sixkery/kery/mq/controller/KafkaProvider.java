@@ -1,6 +1,6 @@
 package com.sixkery.kery.mq.controller;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -39,7 +39,7 @@ public class KafkaProvider {
         BeanUtils.copyProperties(order, newOrder);
 
         // 发送消息，订单类的 json 作为消息体
-        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(TOPIC, JSONObject.toJSONString(newOrder));
+        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(TOPIC, JSON.toJSONString(newOrder));
 
         // 监听回调
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
