@@ -17,7 +17,7 @@
 
 	<modules>
 		<module>basis-common</module>
-		<module>basis-api</module>
+		<module>basis-admin</module>
 		<module>basis-security</module>
 		<module>basis-kafka</module>
 		<module>basis-gateway</module>
@@ -75,39 +75,4 @@
 
 		</dependencies>
 	</dependencyManagement>
-
-
-		<!--        <dependency>-->
-		<!--            <groupId>org.springframework.boot</groupId>-->
-		<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-		<!--        </dependency>-->
-		<!--        hutool 工具包-->
-
-		<!--JWT(Json Web Token)登录支持-->
-<!--		<dependency>-->
-<!--			<groupId>io.jsonwebtoken</groupId>-->
-<!--			<artifactId>jjwt</artifactId>-->
-<!--			<version>0.9.0</version>-->
-<!--		</dependency>-->
-
-
-
-		<!--mysql-->
-
-		<!--redis依赖配置-->
-
-
-
-
-
-
-
-
-
-
-
-
-			<!-- 阿里云OSS -->
-
-
 </project>
