@@ -85,6 +85,8 @@ public class MqApplicationTests {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 System.out.println("消息内容 = " + new String(body));
+                System.out.println("标签是 = " + consumerTag);
+                System.out.println("envelope = " + envelope.toString());
             }
         });
     }
