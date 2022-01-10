@@ -58,9 +58,7 @@ public class AuthenticationFailHandler extends SimpleUrlAuthenticationFailureHan
             }
         } else if (e instanceof DisabledException) {
             ResponseUtil.out(response, ResponseUtil.resultMap(false, 500, "账户被禁用，请联系管理员"));
-        } else if (e instanceof LoginFailLimitException) {
-            ResponseUtil.out(response, ResponseUtil.resultMap(false, 500, ((LoginFailLimitException) e).getMsg()));
-        } else {
+        }  else {
             ResponseUtil.out(response, ResponseUtil.resultMap(false, 500, "登录失败，其他内部错误"));
         }
 
