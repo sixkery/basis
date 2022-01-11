@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * 有效的括号
+ * 20. 有效的括号
  * created by sixkery on 2022/1/10.
  * <p>
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串 s ，判断字符串是否有效。
