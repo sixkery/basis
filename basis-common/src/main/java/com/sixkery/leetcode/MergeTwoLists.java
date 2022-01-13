@@ -11,8 +11,6 @@ import com.sixkery.leetcode.entity.ListNode;
 public class MergeTwoLists {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-
-
         ListNode result = new ListNode(0);
         // 当前操作的指针
         ListNode current = result;
@@ -34,6 +32,31 @@ public class MergeTwoLists {
         }
 
         return result.next;
+
+    }
+
+    /**
+     * 递归解法
+     *
+     * @param list1 第一个链表
+     * @param list2 第二个链表
+     * @return 合并的链表
+     */
+    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+        if (list1.val > list2.val) {
+
+            return mergeTwoLists2(list1, list2.next);
+        } else {
+            return mergeTwoLists2(list1.next, list2);
+        }
+
 
     }
 
