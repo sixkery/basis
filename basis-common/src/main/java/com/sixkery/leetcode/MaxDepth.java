@@ -8,7 +8,9 @@ public class MaxDepth {
 
     public static int maxDepth(String s) {
 
+        // 结果
         int result = 0;
+        // 当前最大深度
         int current = 0;
         for (int i = 0; i < s.length(); i++) {
             char item = s.charAt(i);

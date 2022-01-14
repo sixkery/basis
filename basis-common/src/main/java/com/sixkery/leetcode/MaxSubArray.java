@@ -20,8 +20,6 @@ public class MaxSubArray {
             sum = Math.max(currentSum, sum);
         }
         return sum;
-
-
     }
 
     public static void main(String[] args) {

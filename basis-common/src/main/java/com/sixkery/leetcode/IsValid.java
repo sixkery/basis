@@ -40,6 +40,7 @@ public class IsValid {
             } else if (deque.isEmpty() || item != deque.peek()) {
                 return false;
             } else {
+                // 配对的弹出来
                 deque.pop();
             }
         }
