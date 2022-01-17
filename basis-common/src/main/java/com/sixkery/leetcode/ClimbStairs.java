@@ -2,6 +2,7 @@ package com.sixkery.leetcode;
 
 /**
  * 70. 爬楼梯
+ * 爬第 n 阶楼梯用的方法等于爬 n-1 阶加上 n-2 阶楼梯的方法之和
  * created by sixkery on 2022/1/14.
  */
 public class ClimbStairs {
