@@ -11,6 +11,7 @@ public class NewList {
     private int size;
 
     public NewList() {
+        this(10);
 
     }
 
@@ -20,4 +21,23 @@ public class NewList {
         }
         elementData = new Object[init];
     }
+
+    public void add(Object o) {
+        if (size >= elementData.length) {
+            capacity();
+        }
+        elementData[size++] = o;
+    }
+    public void get() {}
+
+    /**
+     * 扩容方法
+     */
+    public void capacity() {
+        Object[] newElementData = new Object[elementData.length + (elementData.length >> 1)];
+        System.arraycopy(elementData, 0, newElementData, 0, elementData.length);
+        elementData = newElementData;
+    }
+
+
 }
