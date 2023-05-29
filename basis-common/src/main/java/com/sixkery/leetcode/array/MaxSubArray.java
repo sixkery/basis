@@ -1,4 +1,4 @@
-package com.sixkery.leetcode;
+package com.sixkery.leetcode.array;
 
 /**
  * 53. 最大子数组和
@@ -15,6 +15,7 @@ public class MaxSubArray {
             if (currentSum > 0) {
                 currentSum += num;
             } else {
+                // 从新开始计算连续的子数组
                 currentSum = num;
             }
             sum = Math.max(currentSum, sum);

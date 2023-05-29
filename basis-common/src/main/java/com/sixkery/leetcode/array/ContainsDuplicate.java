@@ -1,7 +1,9 @@
 package com.sixkery.leetcode.array;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 /**
  * 217. 存在重复元素
@@ -20,10 +22,13 @@ import java.util.Set;
  * <p>
  * 输入：nums = [1,1,1,3,3,4,3,2,4,2]
  * 输出：true
+ *
+ * @author sixkery
  */
 public class ContainsDuplicate {
 
     /**
+     * 题解零：
      * 存入hash 表，如果可以加进去，那么 hash 表中没有重复的数据
      *
      * @param nums 数组
@@ -38,6 +43,35 @@ public class ContainsDuplicate {
         }
         return false;
     }
+
+    /**
+     * 题解一
+     * 排序 相邻两个元素相等
+     *
+     * @param nums 数组
+     * @return 是否有重复
+     */
+    public static boolean containsDuplicate1(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 题解二
+     * Java 8 统计去重
+     *
+     * @param nums 数组
+     * @return 是否有重复
+     */
+    public static boolean containsDuplicate2(int[] nums) {
+        return IntStream.of(nums).distinct().count() != nums.length;
+    }
+
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 1};

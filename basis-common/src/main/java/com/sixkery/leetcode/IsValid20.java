@@ -22,8 +22,9 @@ import java.util.LinkedList;
  * <p>
  * 输入：s = "()[]{}"
  * 输出：true
+ * @author sixkery
  */
-public class IsValid {
+public class IsValid20 {
 
 
     public static boolean isValid(String s) {

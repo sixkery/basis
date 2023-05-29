@@ -26,18 +26,18 @@ import java.util.List;
  *  
  * <p>
  * created by sixkery on 2022/3/14.
+ *
+ * @author sixkery
  */
 public class FindRestaurant {
 
+    /**
+     * 暴力求解
+     * 我们需要记录 最小索引和，具体地，我们可以先遍历 list1，再在 list2 中找到相同的字符串，如果存在，
+     * 则让两者的索引相加，与最小索引和对比，如果小，则替换之并清除结果集且把当前值加入结果集，如果相等，则加入结果集。
+     */
     public static String[] findRestaurant(String[] list1, String[] list2) {
 
-
-        /**
-         * 暴力求解
-         * 我们需要记录 最小索引和，具体地，我们可以先遍历 list1，再在 list2 中找到相同的字符串，如果存在，
-         * 则让两者的索引相加，与最小索引和对比，如果小，则替换之并清除结果集且把当前值加入结果集，如果相等，则加入结果集。
-         *
-         */
         int min = Integer.MAX_VALUE;
         List<String> resultList = new ArrayList<>();
         for (int i = 0; i < list1.length; i++) {

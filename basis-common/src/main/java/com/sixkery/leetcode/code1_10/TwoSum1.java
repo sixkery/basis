@@ -1,4 +1,4 @@
-package com.sixkery.leetcode;
+package com.sixkery.leetcode.code1_10;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,8 +7,10 @@ import java.util.Map;
 /**
  * 两数之和
  * created by sixkery on 2022/1/10.
+ *
+ * @author sixkery
  */
-public class TwoSum {
+public class TwoSum1 {
 
     /**
      * 暴力求解
@@ -54,6 +56,5 @@ public class TwoSum {
         int[] ints = twoSum(nums, 6);
         System.out.println("ints = " + Arrays.toString(ints));
     }
-
 
 }

@@ -3,7 +3,6 @@ package com.sixkery.basis.security.config.jwt;
 import cn.hutool.core.util.StrUtil;
 import com.sixkery.basis.security.config.properties.TokenProperties;
 import com.sixkery.basis.security.util.RedisUtil;
-import com.sixkery.exception.LoginFailLimitException;
 import com.sixkery.utils.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -58,7 +57,7 @@ public class AuthenticationFailHandler extends SimpleUrlAuthenticationFailureHan
             }
         } else if (e instanceof DisabledException) {
             ResponseUtil.out(response, ResponseUtil.resultMap(false, 500, "账户被禁用，请联系管理员"));
-        }  else {
+        } else {
             ResponseUtil.out(response, ResponseUtil.resultMap(false, 500, "登录失败，其他内部错误"));
         }
 
