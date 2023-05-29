@@ -8,7 +8,6 @@ package com.sixkery.leetcode.code90_100;
  */
 public class HammingDistanceClass461 {
 
-
     /**
      * 知识点：异或的运算符，符号为（^）,其主要是对两个操作数进行位的异或运算，相同取0，相反取1。即两操作数相同时，互相抵消。
      * 解法 Integer.bitCount(x ^ y) 统计二进制 1 的个数
