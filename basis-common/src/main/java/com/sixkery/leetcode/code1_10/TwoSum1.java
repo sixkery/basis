@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 两数之和
+ * 两数之和 easy
  * created by sixkery on 2022/1/10.
  *
  * @author sixkery
