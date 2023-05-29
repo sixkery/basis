@@ -1,7 +1,7 @@
 package com.sixkery.leetcode.code90_100;
 
 /**
- * 461. 汉明距离
+ * 461. 汉明距离 easy
  *
  * @author sixkery
  * @since 2023/5/28
