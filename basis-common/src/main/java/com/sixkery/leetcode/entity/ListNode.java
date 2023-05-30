@@ -9,19 +9,16 @@ import lombok.Data;
 @Data
 public class ListNode {
 
-    public static int val;
-    public static ListNode next;
+    public  int val;
+    public  ListNode next;
 
     ListNode() {
     }
 
 
-    public ListNode(int val) {
-        ListNode.val = val;
+    public ListNode(int x) {
+        val = x;
     }
 
-    ListNode(int val, ListNode next) {
-        ListNode.val = val;
-        ListNode.next = next;
-    }
+
 }
