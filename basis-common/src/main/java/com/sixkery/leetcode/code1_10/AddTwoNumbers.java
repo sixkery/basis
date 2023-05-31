@@ -9,7 +9,7 @@ import com.sixkery.leetcode.entity.ListNode;
  * @author sixkery
  * @since 2023/5/29
  */
-public class TddTwoNumbers {
+public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);
         ListNode cur = head;
