@@ -33,9 +33,12 @@ public class LengthOfLongestSubstring {
         for (end = 0; end < length; end++) {
             char curr = s.toCharArray()[end];
             if (map.containsKey(curr)) {
+                // 返回上一个重复字符的下一个位置
                 start = Math.max(start, map.get(curr) + 1);
             }
+            // 加入字符和他的位置，当遇到重复字符会更新 end 的值
             map.put(curr, end);
+            // 更新最大不重复的子串
             max = Math.max(max, end - start + 1);
 
         }
@@ -43,7 +46,7 @@ public class LengthOfLongestSubstring {
     }
 
     public static void main(String[] args) {
-        String str = "abcabcbb";
+        String str = "abc abcbb";
         lengthOfLongestSubstring(str);
     }
 }
