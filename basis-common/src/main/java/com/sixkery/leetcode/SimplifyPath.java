@@ -15,6 +15,7 @@ public class SimplifyPath {
 
         }
 
+
         return path.replace("//", "/");
     }
 
