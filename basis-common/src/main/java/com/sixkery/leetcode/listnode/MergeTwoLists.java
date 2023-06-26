@@ -12,16 +12,10 @@ import com.sixkery.leetcode.entity.ListNode;
 public class MergeTwoLists {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if (list1 == null) {
-            return list2;
-        }
-        if (list2 == null) {
-            return list1;
-        }
-        ListNode cur = new ListNode(0);
-        ListNode head = cur;
-
+        ListNode dummy = new ListNode(-1);
+        ListNode head = dummy;
         while (list1 != null && list2 != null) {
+            // 比较两个指针，将小的节点接到 head 上
             if (list1.val > list2.val) {
                 head.next = list2;
                 list2 = list2.next;
@@ -29,9 +23,10 @@ public class MergeTwoLists {
                 head.next = list1;
                 list1 = list1.next;
             }
+            // head 不断前进
             head = head.next;
         }
         head.next = list1 == null ? list2 : list1;
-        return cur.next;
+        return dummy.next;
     }
 }
