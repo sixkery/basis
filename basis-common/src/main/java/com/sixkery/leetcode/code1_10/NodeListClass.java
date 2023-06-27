@@ -12,14 +12,6 @@ public class NodeListClass {
          ListNode listNode = new ListNode(0);
         ListNode head = listNode;
 
-        while (node !=null) {
-
-            listNode1.val
-            head.val.next = node.val;
-            head.val.next = node.next;
-            listNode =  node.next;
-        }
-
         return head;
 
 
