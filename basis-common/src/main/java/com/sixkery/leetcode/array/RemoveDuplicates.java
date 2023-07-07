@@ -17,6 +17,7 @@ public class RemoveDuplicates {
         nums[slow + 1] = nums[nums.length-1];
         return slow + 1;
 
+
     }
 
     public static void main(String[] args) {
