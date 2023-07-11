@@ -1,7 +1,6 @@
 package com.sixkery.leetcode.array;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 /**
  * 215. 数组中的第K个最大元素 medium
@@ -19,10 +18,14 @@ public class FindKthLargest {
     public int findKthLargest(int[] nums, int k) {
 
 
-        Set<Integer> set = Arrays.stream(nums).boxed().sorted().collect(Collectors.toCollection(LinkedHashSet::new));
+       Arrays.sort(nums);
 
-         ArrayList<Integer> list = new ArrayList<>();
-        final List<Set<Integer>> sets = Collections.singletonList(set);
+       int length = nums.length - 1;
+       while (k!=0) {
+           k--;
+           length--;
+       }
+       return nums[length + 1];
 
     }
 }
