@@ -12,6 +12,7 @@ import java.util.Map;
 public class LengthOfLongestSubstring {
 
     /**
+     * 滑动窗口
      * 定义一个 map 数据结构存储 (k, v)，其中 key 值为字符，value 值为字符位置 +1，加 1 表示从字符位置后一个才开始不重复
      * 定义不重复子串的开始位置为 start，结束位置为 end
      * 随着 end 不断遍历向后，会遇到与 [start, end] 区间内字符相同的情况，此时将字符作为 key 值，获取其 value 值，
