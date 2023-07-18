@@ -1,4 +1,4 @@
-package com.sixkery.leetcode.code1_10;
+package com.sixkery.leetcode.listnode;
 
 
 import com.sixkery.leetcode.entity.ListNode;
@@ -16,7 +16,7 @@ public class AddTwoNumbers {
 
         // 进位
         int carry = 0;
-        if (l1 != null || l2 != null || carry != 0) {
+        if (l1 != null || l2 != null) {
             int val1 = l1 == null ? 0 : l1.val;
             int val2 = l2 == null ? 0 : l2.val;
             carry = val1 + val2 + carry;

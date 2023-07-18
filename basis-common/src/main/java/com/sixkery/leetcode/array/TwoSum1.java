@@ -1,4 +1,4 @@
-package com.sixkery.leetcode.code1_10;
+package com.sixkery.leetcode.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
