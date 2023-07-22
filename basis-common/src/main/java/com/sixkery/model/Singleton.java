@@ -1,5 +1,7 @@
 package com.sixkery.model;
 
+import java.util.HashMap;
+
 /**
  * @author sixkery
  * @since 2023/7/18
@@ -12,6 +14,7 @@ public class Singleton {
     }
 
     public static Singleton getSingleton() {
+        new HashMap<>()
         if (instance != null) {
             return instance;
         }
