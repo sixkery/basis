@@ -14,7 +14,6 @@ public class Singleton {
     }
 
     public static Singleton getSingleton() {
-        new HashMap<>()
         if (instance != null) {
             return instance;
         }
