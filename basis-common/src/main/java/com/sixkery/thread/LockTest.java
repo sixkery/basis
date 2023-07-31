@@ -1,28 +1,29 @@
 package com.sixkery.thread;
 
-import org.springframework.util.StopWatch;
+import java.io.IOException;
 
 /**
  * @author sixkery
  * @since 2023/7/30
  */
 public class LockTest {
-    public static void main(String[] args) throws InterruptedException {
-        IncreaseDto increaseDto = new IncreaseDto();
-        StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
+    public static void main(String[] args) throws InterruptedException, IOException {
 
-        Thread t1 = new Thread(() -> {
-            for (int i = 0; i < 10000; i++) {
-                increaseDto.increase();
+
+        Thread thread = new Thread(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
-        t1.start();
-        for (int i = 0; i < 10000; i++) {
-            increaseDto.increase();
-        }
-        t1.join();
-        System.out.println("t1 = " + stopWatch.getTotalTimeMillis());
+        thread.start();
+        System.out.println("在50秒之内按任意键中断线程!");
+        System.in.read();
+        thread.interrupt();
+        thread.join();
+        System.out.println("线程已经退出!");
+
 
 
     }

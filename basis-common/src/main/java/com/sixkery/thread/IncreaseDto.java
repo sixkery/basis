@@ -11,7 +11,7 @@ public class IncreaseDto {
         return a;
     }
 
-    public void increase() {
+    public synchronized void increase() {
         a++;
     }
 }
