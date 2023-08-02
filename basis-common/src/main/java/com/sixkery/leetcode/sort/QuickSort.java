@@ -9,34 +9,36 @@ import java.util.Random;
  */
 public class QuickSort {
 
-    public static void quickSort(int[] nums, int i, int j) {
+    public static void quickSort(int[] nums, int left, int right) {
         // 只剩一个元素直接返回
-        if (i >= j) {
+        if (left >= right) {
             return;
         }
         // 选择一个基准数
-        int val = nums[i];
-        int l = i;
-        int r = j;
-        while (l < r) {
-            while (l < r && nums[r] > val) {
+        int key = nums[left];
+        int l = left;
+        int r = right;
+        while (l != r) {
+            // 左边移动
+            while (l < r && nums[r] >= key) {
                 r--;
             }
-            if (l < r) {
-                nums[l++] = nums[r];
-            }
-
-            while (l < r && nums[r] < val) {
+            // 右边移动
+            while (l < r && nums[l] <= key) {
                 l++;
             }
+            // 交换位置
             if (l < r) {
-                nums[r--] = nums[l];
+                int temp = nums[r];
+                nums[r] = nums[l];
+                nums[l] = temp;
             }
-
         }
-        nums[l] = val;
-        quickSort(nums, i, l - 1);
-        quickSort(nums, l + 1, j);
+        // 交换基准位
+        nums[left] = nums[l];
+        nums[l] = key;
+        quickSort(nums, left, l - 1);
+        quickSort(nums, l + 1, right);
     }
 
     public static void main(String[] args) {
