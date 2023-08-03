@@ -1,9 +1,12 @@
 package com.sixkery.basis.admin.web.controller;
 
 
+import com.sixkery.basis.admin.service.MenuService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -16,6 +19,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/system/menu")
 public class MenuController {
+
+    @Resource
+    private MenuService menuService;
+
+    @GetMapping
+    public void concurrence() {
+        menuService.add();
+
+    }
 
 }
 

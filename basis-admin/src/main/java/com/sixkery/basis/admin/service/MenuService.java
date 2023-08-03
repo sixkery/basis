@@ -1,7 +1,7 @@
 package com.sixkery.basis.admin.service;
 
-import com.sixkery.basis.admin.entity.system.MenuDO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sixkery.basis.admin.domain.entity.system.MenuDO;
 
 /**
  * <p>
@@ -12,5 +12,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-11-27
  */
 public interface MenuService extends IService<MenuDO> {
+
+
+    void add();
 
 }

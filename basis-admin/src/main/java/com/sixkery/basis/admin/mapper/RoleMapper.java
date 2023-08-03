@@ -1,6 +1,6 @@
 package com.sixkery.basis.admin.mapper;
 
-import com.sixkery.basis.admin.entity.system.RoleDO;
+import com.sixkery.basis.admin.domain.entity.system.RoleDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

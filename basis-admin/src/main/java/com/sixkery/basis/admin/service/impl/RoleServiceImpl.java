@@ -1,6 +1,6 @@
 package com.sixkery.basis.admin.service.impl;
 
-import com.sixkery.basis.admin.entity.system.RoleDO;
+import com.sixkery.basis.admin.domain.entity.system.RoleDO;
 import com.sixkery.basis.admin.mapper.RoleMapper;
 import com.sixkery.basis.admin.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

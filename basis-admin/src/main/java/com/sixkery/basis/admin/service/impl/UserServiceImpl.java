@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.page.PageMethod;
-import com.sixkery.basis.admin.entity.system.UserDO;
+import com.sixkery.basis.admin.domain.entity.system.UserDO;
 import com.sixkery.basis.admin.mapper.UserMapper;
 import com.sixkery.basis.admin.service.UserService;
 import com.sixkery.basis.admin.web.dto.form.UserDTO;

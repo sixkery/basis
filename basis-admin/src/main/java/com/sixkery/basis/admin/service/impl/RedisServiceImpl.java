@@ -1,6 +1,6 @@
 package com.sixkery.basis.admin.service.impl;
 
-import com.sixkery.service.RedisService;
+import com.sixkery.basis.admin.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -18,11 +18,7 @@ public class RedisServiceImpl implements RedisService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @Override
-    public void set(String key, String value) {
-        stringRedisTemplate.opsForValue().set(key, value);
 
-    }
 
     @Override
     public String get(String key) {
