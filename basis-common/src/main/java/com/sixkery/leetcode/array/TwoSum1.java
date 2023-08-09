@@ -50,6 +50,10 @@ public class TwoSum1 {
         return new int[]{};
     }
 
+
+
+
+
     public static void main(String[] args) {
 //        int[] nums = {3, 3, 1};
         int[] nums = {3, 2, 4};
