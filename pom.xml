@@ -23,6 +23,7 @@
 		<module>basis-gateway</module>
 		<module>basis-producerMq</module>
 		<module>basis-consumerMq</module>
+		<module>basis-es</module>
 	</modules>
 
 
@@ -48,6 +49,7 @@
 		<basis-api.version>1.0-SNAPSHOT</basis-api.version>
 		<basis-security.version>1.0-SNAPSHOT</basis-security.version>
 		<basis-gateway.version>1.0-SNAPSHOT</basis-gateway.version>
+		<elasticsearch.version>7.17.12</elasticsearch.version>
 	</properties>
 
 	<dependencyManagement>

@@ -1,0 +1,25 @@
+server:
+  port: 8500
+
+
+spring:
+  application:
+    name: nineWeb
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+service:
+  es:
+    host: localhost
+    port: 9200
+    username:
+    password:
+
+
+# 日志输出级别
+logging:
+  level:
+    root: info
