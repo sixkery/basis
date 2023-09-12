@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,17 +39,23 @@ public class EsController {
 //        final Map<String, String> map = lastNextWeek("2023-07-03");
 //        System.out.println("map = " + map);
 
-        final long percent = getPercent(0, 100);
-        System.out.println("percent = " + percent);
+//        final String percent = getPercent(0.1, 100);
+//        System.out.println("percent = " + percent);
+
+        final Integer sum = sum();
+        System.out.println("sum = " + sum);
     }
 
-    private static long getPercent(long count, long total) {
+    private static String getPercent(long count, long total) {
 
-        BigDecimal currentCount = new BigDecimal(count);
-        BigDecimal totalCount = new BigDecimal(total);
-        BigDecimal divide = currentCount.divide(totalCount, 2, RoundingMode.HALF_UP);
-        return divide.multiply(new BigDecimal(100)).longValue();
+        BigDecimal dividendBigDecimal = BigDecimal.valueOf(count);
+        BigDecimal divisorBigDecimal = BigDecimal.valueOf(total);
+
+        BigDecimal result = dividendBigDecimal.divide(divisorBigDecimal, 4, RoundingMode.HALF_UP);
+        DecimalFormat decimalFormat = new DecimalFormat("0.00%");
+        return decimalFormat.format(result);
     }
+
 
     public static Map<String, String> lastNextWeek(String dateStr) {
 
@@ -64,5 +73,19 @@ public class EsController {
         resultMap.put("nextMonday", sunday.format(formatter));
 
         return resultMap;
+    }
+
+
+    public static Integer sum() {
+        List<Integer> list = new ArrayList<>();
+        list.add(7657721);
+        list.add(302989);
+        list.add(285860);
+        list.add(273406);
+        list.add(265491);
+        list.add(203520);
+        list.add(34947);
+        return list.stream().mapToInt(Integer::intValue).sum();
+
     }
 }
