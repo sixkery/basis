@@ -78,9 +78,9 @@ public class EsController {
 
     public static Integer sum() {
         List<Integer> list = new ArrayList<>();
-        list.add(6662407);
-        list.add(1950836);
-        list.add(410691);
+        list.add(2333686);
+        list.add(648673);
+        list.add(358109);
 
         return list.stream().mapToInt(Integer::intValue).sum();
 
