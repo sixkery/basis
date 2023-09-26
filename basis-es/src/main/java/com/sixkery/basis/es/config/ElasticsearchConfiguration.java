@@ -38,7 +38,6 @@ public class ElasticsearchConfiguration {
 
     @Bean
     public ElasticsearchTransport elasticsearchTransport() {
-        // https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/7.17/_basic_authentication.html
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(properties.getUsername(), properties.getPassword()));
 
@@ -60,10 +59,6 @@ public class ElasticsearchConfiguration {
         objectMapper.registerModule(javaTimeModule);
         objectMapper.registerModule(new Jdk8Module());
         objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        // 去掉默认的时间格式
-        // objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-        // objectMapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
-        // objectMapper.setTimeZone(TimeZone.getTimeZone("GMT+8"));
 
         return new RestClientTransport(restClient, new JacksonJsonpMapper(objectMapper));
     }
