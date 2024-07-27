@@ -2,6 +2,7 @@ package com.sixkery.exception;
 
 
 import com.sixkery.response.ErrorCode;
+import lombok.Getter;
 
 /**
  * 自定义API异常
@@ -9,6 +10,7 @@ import com.sixkery.response.ErrorCode;
  * @author sixkery
  * @date 2020/4/23
  */
+@Getter
 public class ApiException extends RuntimeException {
 
     private ErrorCode errorCode;
@@ -44,11 +46,4 @@ public class ApiException extends RuntimeException {
         this.data = data;
     }
 
-    public ErrorCode getErrorCode() {
-        return errorCode;
-    }
-
-    public Object getData() {
-        return this.data;
-    }
 }

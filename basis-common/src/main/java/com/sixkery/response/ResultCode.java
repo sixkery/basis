@@ -11,7 +11,7 @@ public enum ResultCode implements ErrorCode {
     /**
      * 操作成功
      */
-    SUCCESS(200, "ok"),
+    SUCCESS(0, "ok"),
     /**
      * 操作失败
      */

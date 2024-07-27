@@ -1,7 +1,5 @@
 package com.sixkery.model;
 
-import java.util.HashMap;
-
 /**
  * @author sixkery
  * @since 2023/7/18

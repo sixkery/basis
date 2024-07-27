@@ -1,6 +1,7 @@
 package com.sixkery.utils;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * @author sixkery
@@ -18,7 +19,7 @@ public class DivisionUtil {
         BigDecimal bb = BigDecimal.valueOf(b);
 
         return bb == null ? "0.00%" : bb.compareTo(new BigDecimal(0)) == 0 ? "0%" : aa == null ? "0.00%" :
-                aa.multiply(new BigDecimal(100)).divide(bb, 2, BigDecimal.ROUND_HALF_UP) + "%";
+                aa.multiply(new BigDecimal(100)).divide(bb, 2, RoundingMode.HALF_UP) + "%";
 
     }
 

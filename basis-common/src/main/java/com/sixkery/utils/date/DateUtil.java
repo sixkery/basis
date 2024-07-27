@@ -1,26 +1,18 @@
 package com.sixkery.utils.date;
 
-import com.sixkery.exception.ApiException;
-import lombok.Data;
-
 import java.lang.management.ManagementFactory;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 
 
 /**
- * <p>
  * 时间工具类
  *
  * @author sixkery
- * @date 2020/5/16
+ * @since 2020/5/16
  */
 public class DateUtil {
 
@@ -70,43 +62,6 @@ public class DateUtil {
         return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
     }
 
-
-    /**
-     * 根据 1 2 3 4 获取今日，最近七天， 最近十五天， 最近三十天的时间区间
-     *
-     * @param inter 1 2 3 4
-     * @return 2020-01-12 ---- 2020-01-05
-     */
-    public static DateInterval getInterval(int inter) {
-        List<Integer> integers = Arrays.asList(1, 2, 3, 4);
-        if (!integers.contains(inter)) {
-            throw new ApiException("时间区间参数有误,只可输入 1 2 3 4");
-        }
-        LocalDate now = LocalDate.now();
-        LocalDate beforeDay;
-        if (inter == TODAY) {
-            beforeDay = LocalDate.now();
-        } else if (inter == SEVEN_DAY) {
-            beforeDay = now.minus(7, ChronoUnit.DAYS);
-        } else if (inter == FIFTEEN) {
-            beforeDay = now.minus(15, ChronoUnit.DAYS);
-        } else {
-            beforeDay = now.minus(1, ChronoUnit.MONTHS);
-        }
-        DateInterval dateInterval = new DateInterval();
-        String startTime = now.format(DateTimeFormatter.ofPattern(DATE_TIME_PATTERN));
-        String endTime = beforeDay.format(DateTimeFormatter.ofPattern(DATE_TIME_PATTERN));
-        dateInterval.setStartTime(startTime);
-        dateInterval.setEndTime(endTime);
-        return dateInterval;
-    }
-
-    @Data
-    static class DateInterval {
-        String startTime;
-        String endTime;
-    }
-
     /**
      * 获取服务器启动时间
      *
@@ -124,12 +79,6 @@ public class DateUtil {
 
     public static String endPreFix(String date) {
         return date + "23:23:59";
-    }
-
-
-    public static void main(String[] args) {
-        DateInterval interval = DateUtil.getInterval(4);
-
     }
 
 }
