@@ -1,9 +1,10 @@
-package com.sixkery.leetcode.listnode;
+package com.sixkery.leetcode.listnode.hotleetcode;
 
 import com.sixkery.leetcode.entity.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 234. 回文链表 easy
@@ -25,23 +26,19 @@ public class IsPalindrome {
     public boolean isPalindrome(ListNode head) {
 
         List<Integer> list = new ArrayList<>();
-
-        while (head != null) {
-            list.add(head.val);
-            head = head.next;
+        ListNode cur = head;
+        while (cur != null) {
+            list.add(cur.val);
+            cur = cur.next;
         }
-
-        int font = 0;
-        int back = list.size() - 1;
-        while (back > font) {
-            if (!list.get(font).equals(list.get(back))) {
+        int font = 0, back = list.size() - 1;
+        while (font < back) {
+            if (!Objects.equals(list.get(font), list.get(back))) {
                 return false;
             }
             font++;
             back--;
         }
-        return true;
-
-
+        return false;
     }
 }

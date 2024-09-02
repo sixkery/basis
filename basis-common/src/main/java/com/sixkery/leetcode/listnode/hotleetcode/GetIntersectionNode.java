@@ -1,8 +1,9 @@
-package com.sixkery.leetcode.listnode;
+package com.sixkery.leetcode.listnode.hotleetcode;
 
 import com.sixkery.leetcode.entity.ListNode;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 160. 相交链表 easy
@@ -27,7 +28,7 @@ public class GetIntersectionNode {
 
     public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
         ListNode cur = headA;
-        HashSet<ListNode> set = new HashSet<>();
+        Set<ListNode> set = new HashSet<>();
         while (cur != null) {
             set.add(cur);
             cur = cur.next;
