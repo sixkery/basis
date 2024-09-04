@@ -19,15 +19,27 @@ import java.util.Set;
 public class HasCycle {
 
     public static boolean hasCycle(ListNode head) {
-        Set<ListNode> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>();
         ListNode cur = head;
         while (cur != null) {
-            if (!set.add(cur)) {
+            if (!set.add(cur.val)) {
                 return true;
             }
             cur = cur.next;
         }
         return false;
+
+    }
+
+    public static void main(String[] args) {
+        // 测试 hasCycle 方法
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(1);
+        final boolean b = hasCycle(head);
+        System.out.println("b = " + b);
+
 
     }
 }
