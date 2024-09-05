@@ -9,7 +9,7 @@ import com.sixkery.leetcode.entity.TreeNode;
  * @author sixkery
  * @since 2024/9/1
  */
-public class invertTree {
+public class InvertTree {
 
 
     public TreeNode invertTree(TreeNode root) {

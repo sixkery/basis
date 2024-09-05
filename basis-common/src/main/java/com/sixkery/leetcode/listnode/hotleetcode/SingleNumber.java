@@ -30,7 +30,7 @@ public class SingleNumber {
 
     /**
      * 异或运算有个重要的性质，两个相同数字异或为 0
-     * @param nums 
+     * @param nums
      * @return
      */
     private static int singleNumber1(int[] nums) {
