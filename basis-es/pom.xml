@@ -48,13 +48,13 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>7.17.12</version>
+            <version>${elasticsearch.version}</version>
         </dependency>
 
         <dependency>
             <groupId>co.elastic.clients</groupId>
             <artifactId>elasticsearch-java</artifactId>
-            <version>7.17.12</version>
+            <version>${elasticsearch.version}</version>
         </dependency>
 
         <dependency>
@@ -64,25 +64,6 @@
         </dependency>
 
 
-<!--        &lt;!&ndash;	jackson		&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
-<!--            <artifactId>jackson-datatype-jsr310</artifactId>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--        </dependency>-->
-
-
-
-
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>fastjson</artifactId>-->
-<!--            <version>2.0.31</version>-->
-<!--        </dependency>-->
 
     </dependencies>
 
