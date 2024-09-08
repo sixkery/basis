@@ -1,5 +1,7 @@
 package com.sixkery.leetcode.array;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,6 +27,8 @@ import java.util.stream.IntStream;
  *
  * @author sixkery
  */
+
+@Slf4j
 public class ContainsDuplicate {
 
     /**
@@ -76,6 +80,6 @@ public class ContainsDuplicate {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 1};
         final boolean b = containsDuplicate(nums);
-        System.out.println("b = " + b);
+        log.info("b = " + b);
     }
 }

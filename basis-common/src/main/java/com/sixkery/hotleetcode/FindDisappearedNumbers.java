@@ -1,4 +1,4 @@
-package com.sixkery.leetcode.listnode.hotleetcode;
+package com.sixkery.hotleetcode;
 
 import java.util.ArrayList;
 import java.util.HashSet;

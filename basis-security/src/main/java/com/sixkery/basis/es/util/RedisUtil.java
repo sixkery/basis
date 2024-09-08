@@ -11,7 +11,6 @@ import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -44,9 +43,6 @@ public class RedisUtil {
             try (Cursor<byte[]> cursor = connection.scan(ScanOptions.scanOptions().count(Long.MAX_VALUE).match(pattern).build())) {
                 cursor.forEachRemaining(consumer);
                 return null;
-            } catch (IOException e) {
-                e.printStackTrace();
-                throw new ApiException(e);
             }
 
         });

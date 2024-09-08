@@ -1,4 +1,4 @@
-package com.sixkery.leetcode.listnode.hotleetcode;
+package com.sixkery.hotleetcode;
 
 /**
  * 121. 买卖股票的最佳时机

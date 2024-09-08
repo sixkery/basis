@@ -1,4 +1,4 @@
-package com.sixkery.leetcode.listnode.hotleetcode;
+package com.sixkery.hotleetcode;
 
 import java.util.HashMap;
 import java.util.Map;
