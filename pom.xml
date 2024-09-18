@@ -24,6 +24,7 @@
 		<module>basis-producerMq</module>
 		<module>basis-consumerMq</module>
 		<module>basis-es</module>
+		<module>basis-hadoop</module>
 	</modules>
 
 
