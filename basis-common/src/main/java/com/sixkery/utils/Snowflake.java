@@ -85,7 +85,7 @@ public class Snowflake {
         lastTimestamp = timestamp;
 
         //移位并通过或运算拼到一起组成64位的ID
-        return ((timestamp - BASIC_TIMESTAMP) << 22) | (workId << 17) | (machineId << 12) | sequence;
+        return ((timestamp - BASIC_TIMESTAMP) << 22) | ((long) workId << 17) | ((long) machineId << 12) | sequence;
     }
 
     /**

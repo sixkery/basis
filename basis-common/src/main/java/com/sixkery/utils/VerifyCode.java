@@ -17,17 +17,17 @@ public class  VerifyCode {
     /**
      * 生成验证码图片的宽度
      */
-    private int width = 100;
+    private final int width = 100;
     /**
      * 生成验证码图片的高度
      */
-    private int height = 50;
-    private String[] fontNames = {"宋体", "楷体", "隶书", "微软雅黑"};
-    private Color bgColor = new Color(255, 255, 255);
+    private final int height = 50;
+    private final String[] fontNames = {"宋体", "楷体", "隶书", "微软雅黑"};
+    private final Color bgColor = new Color(255, 255, 255);
     /**
      * 定义验证码图片的背景颜色为白色
      */
-    private Random random = new Random();
+    private final Random random = new Random();
     /**
      * 记录随机字符串
      */

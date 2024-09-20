@@ -43,10 +43,7 @@ public class NameUtil {
             return false;
         }
         Matcher m = pUsername.matcher(v);
-        if (m.matches()) {
-            return true;
-        }
-        return false;
+        return m.matches();
     }
 
     public static boolean mobile(String v) {
@@ -55,10 +52,7 @@ public class NameUtil {
             return false;
         }
         Matcher m = pMobile.matcher(v);
-        if (m.matches()) {
-            return true;
-        }
-        return false;
+        return m.matches();
     }
 
     public static boolean email(String v) {
@@ -67,9 +61,6 @@ public class NameUtil {
             return false;
         }
         Matcher m = pEmail.matcher(v);
-        if (m.matches()) {
-            return true;
-        }
-        return false;
+        return m.matches();
     }
 }

@@ -42,7 +42,7 @@ public final class Maps {
      */
     public static class MapBuilder<K, V> {
 
-        private Map<K, V> map = Collections.emptyMap();
+        private final Map<K, V> map = Collections.emptyMap();
 
         public MapBuilder<K, V> put(K key, V value) {
             this.map.put(key, value);

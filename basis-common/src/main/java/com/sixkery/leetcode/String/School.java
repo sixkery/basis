@@ -43,8 +43,8 @@ class test {
         shangHai2.setType("A");
 
         System.out.println(shangHai.equals(shangHai2));
-        System.out.println(shangHai.toString());
-        System.out.println(shangHai2.toString());
+        System.out.println(shangHai);
+        System.out.println(shangHai2);
 
     }
 }

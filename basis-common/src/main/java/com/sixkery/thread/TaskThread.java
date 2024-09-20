@@ -21,7 +21,7 @@ public class TaskThread {
     }
 
     static class Task implements Runnable {
-        private int taskNum;
+        private final int taskNum;
 
         public Task(int i) {
             this.taskNum = i;

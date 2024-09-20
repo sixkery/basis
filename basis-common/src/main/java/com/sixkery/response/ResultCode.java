@@ -38,7 +38,7 @@ public enum ResultCode implements ErrorCode {
      */
     private final String message;
 
-    private ResultCode(int code, String message) {
+    ResultCode(int code, String message) {
         this.code = code;
         this.message = message;
     }
