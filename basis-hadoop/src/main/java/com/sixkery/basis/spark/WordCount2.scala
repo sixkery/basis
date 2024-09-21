@@ -1,28 +1,30 @@
 package com.sixkery.basis.spark
 
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.{SparkConf, SparkContext}
 
-class WordCount2 {
+case class StudentScore(className: String, name: String, age: Int, gender: String, subject: String, score: Int)
 
+object WordCount2 {
 
-  case class StudentScore(class: String, name: String, score: Int)
 
   def main(args: Array[String]): Unit = {
 
-
     // 创建 spark 运行配置对象
-    val sparkConf = new SparkConf().setMaster("local[*]").setAppName("sparkSQL_demo_01")
+    val sparkConf = new SparkConf().setMaster("local[*]").setAppName("WordCount2")
 
+    val spark: SparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
 
-    val spark = SparkSession.builder().config(sparkConf).getOrCreate()
+    // 直接读取 JSON 文件
+    val studentScoreDF = spark.read.csv("/Users/sixkery/Downloads/bigdata/sparkSQL.csv")
 
-    val sc = spark.sparkContext
+    // 转换为 DataSet[StudentScore]
+//    val studentScoreDS = studentScoreDF.as[StudentScore]
+    //
+    //    // 显示数据
+//    studentScoreDS.show()
 
-    val value = sc.textFile("/Users/sixkery/Downloads/bigdata/sparkSQL.json")
-
-    value.map(x=>Str)
-    frame.createOrReplaceTempView("user")
+    // 关闭 SparkSession
+    spark.stop()
   }
-
 }
