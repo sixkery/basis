@@ -19,9 +19,7 @@ object FileRdd {
     val value = rdd.map(x => StudentScore(x(0), x(1), x(2).toInt, x(3), x(4), x(5).toInt))
 
     // 把 value 转换成 dataframe
-    value.toDF().show()
     value.foreach(println)
-    value.toDF
 
   }
 
