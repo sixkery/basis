@@ -20,7 +20,7 @@ object MakeSql {
     println("小于20岁的人参加考试人数为：")
     spark.sql("SELECT count(*) FROM studentScore where age < 20").show()
 
-    
+
 
     // 关闭环境
     spark.close()
