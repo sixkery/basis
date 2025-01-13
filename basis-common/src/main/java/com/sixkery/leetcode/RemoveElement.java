@@ -1,7 +1,5 @@
 package com.sixkery.leetcode;
 
-import lombok.val;
-
 /**
  * @author sixkery
  * @since 2025/1/7
@@ -21,12 +19,11 @@ public class RemoveElement {
             }
         }
 
-       for ()
         System.out.println("length = " + count);
 
     }
 
-    
+
     public static void main(String[] args) {
         int[] a = {0,1,2,2,3,0,4,2};
         remove(a,2);
